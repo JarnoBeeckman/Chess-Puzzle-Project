@@ -80,7 +80,7 @@ function loadPosition(index) {
   board.position(position.fen);
   currentMoveIndex = 0; // Reset the move index for the new position
   const puzzleNameElement = document.getElementById("puzzleName");
-  puzzleNameElement.textContent = `Puzzle: ${position.name || "Unnamed"}`;
+  puzzleNameElement.textContent = `${position.name || "Unnamed"}`;
   
   moveSequence = position.moves; // Set the move sequence to follow
   if ((currentIsWhite && !isWhite) || (!currentIsWhite && isWhite)) {
