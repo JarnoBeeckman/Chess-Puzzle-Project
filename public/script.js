@@ -99,9 +99,15 @@ function displayMessage(message, type) {
     }, 3000); // message disappears after 3 seconds
   }
 
+  function getRandomIndex(max) {
+    const randomBuffer = new Uint32Array(1);
+    window.crypto.getRandomValues(randomBuffer);
+    return randomBuffer[0] % max;
+}
+
   function loadRandomPuzzle() {
     // Randomly select a puzzle from savedPositions
-    const randomIndex = Math.floor(Math.random() * savedPositions.length);
+    const randomIndex = getRandomIndex(savedPositions.length);
     loadPosition(randomIndex)
   }
   
