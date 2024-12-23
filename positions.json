@@ -288,5 +288,204 @@
       "Nbd7",
       "h4"
     ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "name": "Indian Defense",
+    "moves": [
+      "Nf6",
+      "Bf4",
+      "d5",
+      "e3",
+      "c5",
+      "c3",
+      "Nc6",
+      "Nf3",
+      "Nh5",
+      "Bg3",
+      "Nxg3",
+      "hxg3",
+      "Qb6",
+      "Qb3",
+      "g6",
+      "Nbd2",
+      "e6"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "name": "Sicilian Defense: Lasker-Dunne Attack",
+    "moves": [
+      "c5",
+      "g3",
+      "d5",
+      "Bg2",
+      "dxe4",
+      "Bxe4",
+      "g6",
+      "Bg2",
+      "e5",
+      "Nc3",
+      "Nc6"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "Queen's Gambit Accepted: Central Variation, McDonnell Defense",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "dxc4",
+      "e4",
+      "e5",
+      "Nf3",
+      "exd4",
+      "Bxc4",
+      "Nc6",
+      "O-O",
+      "Be6",
+      "Nbd2",
+      "Qf6",
+      "Qa4",
+      "O-O-O",
+      "Re1"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "Queen's Gambit Accepted: Central Variation, Alekhine System",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "dxc4",
+      "e4",
+      "Nf6",
+      "e5",
+      "Nd5",
+      "Bxc4",
+      "Bf5",
+      "Ne2"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/1P6/P1PPPPPP/RNBQKBNR b KQkq - 0 1",
+    "name": "Nimzo-Larsen Attack: Modern Variation",
+    "moves": [
+      "e5",
+      "Bb2",
+      "Nc6",
+      "Nf3",
+      "e4",
+      "Nd4",
+      "Nxd4",
+      "Bxd4",
+      "d5",
+      "e3",
+      "h5",
+      "d3",
+      "Qg5",
+      "dxe4",
+      "dxe4"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "name": "Sicilian Defense: Alapin Variation, Barmen Defense",
+    "moves": [
+      "c5",
+      "c3",
+      "d5",
+      "exd5",
+      "Qxd5",
+      "d4",
+      "Nc6",
+      "Nf3",
+      "Nf6"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "Indian Defense: Budapest Defense, Alekhine Variation, Abonyi Variation",
+    "moves": [
+      "d4",
+      "Nf6",
+      "c4",
+      "e5",
+      "dxe5",
+      "Ng4",
+      "e4",
+      "Nxe5",
+      "f4",
+      "Nec6",
+      "Nc3",
+      "Bc5",
+      "Qg4",
+      "O-O",
+      "f5"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "name": "Indian Defense",
+    "moves": [
+      "Nf6",
+      "Bf4",
+      "d5",
+      "e3",
+      "c5",
+      "c3",
+      "Nc6",
+      "Nf3",
+      "Nh5",
+      "Bg3",
+      "Nxg3",
+      "hxg3",
+      "Qb6",
+      "Qb3",
+      "g6",
+      "Bd3",
+      "c4",
+      "Qxb6",
+      "axb6",
+      "Bc2",
+      "b5",
+      "Nbd2",
+      "b4",
+      "O-O",
+      "e6",
+      "e4",
+      "bxc3",
+      "bxc3",
+      "b5"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack, Fianchetto Variation",
+    "moves": [
+      "c5",
+      "Nf3",
+      "Nc6",
+      "Bb5",
+      "g6",
+      "Bxc6",
+      "dxc6",
+      "d3",
+      "Bg7",
+      "h3",
+      "Nf6",
+      "Nc3",
+      "Nd7",
+      "Be3",
+      "e5",
+      "Qd2",
+      "h6",
+      "O-O",
+      "b6",
+      "Nh2",
+      "Nf6"
+    ]
   }
 ]
