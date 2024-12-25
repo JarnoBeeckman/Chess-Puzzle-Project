@@ -113,45 +113,63 @@ function displayMessage(message, type) {
   
   
   
-
 // Handle move on the board
-function handleMove(source, target) {
-  // If there's no active puzzle, just allow free movement
-  if (moveSequence.length === 0) {
-    const move = chess.move({ from: source, to: target });
-    if (move === null) return "snapback"; // Revert invalid moves
-    board.position(chess.fen()); // Update the board
-    return;
-  }
-
-  // Existing logic for handling moves in a puzzle
-  const move = chess.move({ from: source, to: target });
-
-  // If move is null (invalid), return to the original position
-  if (move === null) {
-    displayMessage("Invalid move! Please try again.", "error");
-    return "snapback";
-  }
-
-  // Normalize the move SAN (remove any additional symbols like +, #, etc.)
-  const moveSAN = move.san;
-  const expectedMove = moveSequence[currentMoveIndex]; // Get the expected move
-
-  // Check if the move matches the expected move in the sequence
-  if (moveSAN !== expectedMove) {
-    displayMessage(`Wrong move! The correct move is: ${expectedMove}`, "error");
-    chess.undo();
-    board.position(chess.fen());
-    return "snapback";
-  } else {
-    currentMoveIndex++; // Move to the next move in the sequence
-    if (currentMoveIndex === moveSequence.length) {
-      setTimeout(loadRandomPuzzle, 100);
+  function handleMove(source, target) {
+    const move = chess.move({
+      from: source,
+      to: target,
+      promotion: "q", // Default to queen temporarily
+    });
+  
+    // If move is null, revert to original position
+    if (move === null) return "snapback";
+  
+    // Handle pawn promotion
+    if (move.piece === "p" && (target[1] === "1" || target[1] === "8")) {
+      setTimeout(() => {
+        const promotion = prompt("Promote to (q, r, b, n):", "q").toLowerCase();
+        if (["q", "r", "b", "n"].includes(promotion)) {
+          // Undo the previous move and replay with the selected promotion
+          chess.undo();
+          chess.move({
+            from: source,
+            to: target,
+            promotion,
+          });
+          board.position(chess.fen()); // Update the board with the promoted piece
+        } else {
+          // If invalid input, default to queen
+          chess.undo();
+          chess.move({
+            from: source,
+            to: target,
+            promotion: "q",
+          });
+          board.position(chess.fen());
+        }
+      }, 0);
     } else {
-      setTimeout(makeOpponentMove,100)
+      board.position(chess.fen()); // Update the board for non-promotion moves
+    }
+  
+    // Puzzle logic
+    if (moveSequence.length > 0) {
+      const expectedMove = moveSequence[currentMoveIndex];
+      if (move.san !== expectedMove) {
+        displayMessage(`Wrong move! Expected: ${expectedMove}`, "error");
+        chess.undo();
+        board.position(chess.fen());
+        return "snapback";
+      }
+      currentMoveIndex++;
+      if (currentMoveIndex === moveSequence.length) {
+        displayMessage("Puzzle completed!", "success");
+        setTimeout(loadRandomPuzzle, 100);
+      } else {
+        setTimeout(makeOpponentMove, 100);
+      }
     }
   }
-}
 
 
   
