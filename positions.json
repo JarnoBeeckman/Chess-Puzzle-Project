@@ -45,25 +45,6 @@
     ]
   },
   {
-    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
-    "name": "Queen's Gambit Declined: Ragozin Defense",
-    "moves": [
-      "Nf6",
-      "c4",
-      "e6",
-      "Nf3",
-      "d5",
-      "Nc3",
-      "Bb4",
-      "Bg5",
-      "dxc4",
-      "e4",
-      "h6",
-      "Bxf6",
-      "Qxf6"
-    ]
-  },
-  {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
     "name": "Sicilian Defense: Lasker-Pelikan Variation",
     "moves": [
@@ -486,6 +467,135 @@
       "b6",
       "Nh2",
       "Nf6"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "Queen's Gambit Declined: Marshall Defense (Trapped Queen)",
+    "moves": [
+      "d4",
+      "Nf6",
+      "c4",
+      "d5",
+      "cxd5",
+      "Qxd5",
+      "Nc3",
+      "Qa5",
+      "Bd2",
+      "Bf5",
+      "e4",
+      "Bg6",
+      "Nd5",
+      "Qb6",
+      "Nxb6"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "name": "Sicilian Defense: Old Sicilian",
+    "moves": [
+      "c5",
+      "Nf3",
+      "Nc6",
+      "Bc4",
+      "e6",
+      "d3",
+      "d5",
+      "exd5",
+      "exd5",
+      "Qe2+",
+      "Be6",
+      "Bb3",
+      "Be7",
+      "Nc3",
+      "Nf6",
+      "Bg5",
+      "O-O",
+      "O-O",
+      "h6",
+      "Bh4",
+      "a6"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "Queen's Gambit Declined: Marshall Defense",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "Nf6",
+      "cxd5",
+      "Nxd5",
+      "Nf3",
+      "Nc6",
+      "e4",
+      "Nf6",
+      "Nc3",
+      "Bg4",
+      "d5",
+      "Ne5",
+      "Nxe5",
+      "Bxd1",
+      "Bb5+",
+      "c6",
+      "dxc6",
+      "a6",
+      "c7+",
+      "axb5",
+      "cxd8=Q+",
+      "Rxd8",
+      "Nxd1"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense",
+    "moves": [
+      "d4",
+      "Nf6",
+      "c4",
+      "e6",
+      "Nf3",
+      "d5",
+      "Nc3",
+      "c5",
+      "cxd5",
+      "cxd4",
+      "Qxd4",
+      "exd5",
+      "e4",
+      "Nc6",
+      "Bb5",
+      "dxe4",
+      "Qxd8+",
+      "Kxd8",
+      "Ng5",
+      "Be6",
+      "Nxe6+",
+      "fxe6",
+      "Bxc6",
+      "bxc6",
+      "Ke2",
+      "Bd6",
+      "Be3"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "name": "Indian Defense",
+    "moves": [
+      "Nf6",
+      "Bf4",
+      "d5",
+      "e3",
+      "c5",
+      "Nf3",
+      "Nc6",
+      "c4",
+      "Bg4",
+      "cxd5",
+      "Nxd5"
     ]
   }
 ]
