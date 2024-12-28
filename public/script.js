@@ -196,29 +196,6 @@ function displayMessage(message, type) {
     }
   }
   
-  
-  // Function to play the opponent's move automatically
-  function playOpponentMove() {
-    if (currentMoveIndex < moveSequence.length) {
-      const opponentMove = moveSequence[currentMoveIndex];
-  
-      // Make the opponent's move on the board
-      const move = chess.move(opponentMove);
-      board.position(chess.fen());  // Update the board to reflect the move
-  
-      console.log("Opponent moves:", move);
-  
-      // Increment the move index after the opponent's move
-      currentMoveIndex++;
-  
-      // Check if the sequence is complete
-      if (currentMoveIndex >= moveSequence.length) {
-        displayMessage("You completed the opening sequence!", "success");
-        loadRandomPuzzle();  // Load a new puzzle when the sequence is completed
-      }
-    }
-  }
-  
 
 // Automatically make the opponent's move
 function makeOpponentMove() {
