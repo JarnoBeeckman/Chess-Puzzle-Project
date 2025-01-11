@@ -278,17 +278,6 @@
     ]
   },
   {
-    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Queen's Gambit Accepted: Saduleto Variation",
-    "moves": [
-      "d4",
-      "d5",
-      "c4",
-      "dxc4",
-      "e4"
-    ]
-  },
-  {
     "fen": "rnbqkbnr/pppppppp/8/8/8/1P6/P1PPPPPP/RNBQKBNR b KQkq - 0 1",
     "name": "Nimzo-Larsen Attack: Modern Variation",
     "moves": [
@@ -299,7 +288,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Indian Defense: Budapest Defense, Alekhine Variation, Abonyi Variation",
+    "name": "Indian Defense: Budapest Defense, Alekhine Variation",
     "moves": [
       "d4",
       "Nf6",
@@ -309,65 +298,7 @@
       "Ng4",
       "e4",
       "Nxe5",
-      "f4",
-      "Nec6",
-      "Nc3",
-      "Bc5",
-      "Qg4",
-      "O-O",
-      "f5"
-    ]
-  },
-  {
-    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
-    "name": "Indian Defense",
-    "moves": [
-      "Nf6",
-      "Bf4",
-      "d5",
-      "e3",
-      "c5",
-      "c3",
-      "Nc6",
-      "Nf3",
-      "Nh5",
-      "Bg3",
-      "Nxg3",
-      "hxg3",
-      "Qb6",
-      "Qb3",
-      "g6",
-      "Bd3",
-      "c4",
-      "Qxb6",
-      "axb6",
-      "Bc2",
-      "b5",
-      "Nbd2",
-      "b4",
-      "O-O",
-      "e6",
-      "e4",
-      "bxc3",
-      "bxc3",
-      "b5"
-    ]
-  },
-  {
-    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
-    "name": "Indian Defense",
-    "moves": [
-      "Nf6",
-      "Bf4",
-      "d5",
-      "e3",
-      "c5",
-      "Nf3",
-      "Nc6",
-      "c4",
-      "Bg4",
-      "cxd5",
-      "Nxd5"
+      "f4"
     ]
   },
   {
@@ -380,19 +311,7 @@
       "d5",
       "Nc3",
       "Nf6",
-      "e5",
-      "Nfd7",
-      "f4",
-      "c5",
-      "Nf3",
-      "Nc6",
-      "Be3",
-      "cxd4",
-      "Nxd4",
-      "Bc5",
-      "Qd2",
-      "O-O",
-      "O-O-O"
+      "e5"
     ]
   },
   {
@@ -403,34 +322,7 @@
       "d5",
       "c4",
       "g6",
-      "cxd5",
-      "Bg7",
-      "e4",
-      "Nf6",
-      "Nc3",
-      "O-O",
-      "Nf3"
-    ]
-  },
-  {
-    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Indian Defense: Anti-Nimzo-Indian",
-    "moves": [
-      "d4",
-      "Nf6",
-      "c4",
-      "e6",
-      "Nf3",
-      "Nc6",
-      "a3",
-      "d5",
-      "Nc3",
-      "dxc4",
-      "e4",
-      "Qe7",
-      "Bxc4",
-      "e5",
-      "d5"
+      "cxd5"
     ]
   },
   {
@@ -445,15 +337,7 @@
       "Nf6",
       "Nc3",
       "Bf5",
-      "cxd5",
-      "cxd5",
-      "Qb3",
-      "Qb6",
-      "Nxd5",
-      "Nxd5",
-      "Qxd5",
-      "e6",
-      "Qb3"
+      "cxd5"
     ]
   },
   {
@@ -468,15 +352,7 @@
       "e6",
       "Bf4",
       "d5",
-      "e3",
-      "dxc4",
-      "Bxc4",
-      "Bd6",
-      "Bxd6",
-      "Qxd6",
-      "O-O",
-      "O-O",
-      "Re1"
+      "e3"
     ]
   },
   {
@@ -491,13 +367,7 @@
       "Nc6",
       "Nf3",
       "b5",
-      "a4",
-      "Ba6",
-      "axb5",
-      "Bxb5",
-      "Nc3",
-      "a6",
-      "d5"
+      "a4"
     ]
   },
   {
@@ -510,54 +380,7 @@
       "e6",
       "Nc3",
       "c6",
-      "e4",
-      "dxe4",
-      "Nxe4",
-      "Bb4+",
-      "Bd2",
-      "Qxd4",
-      "Bxb4",
-      "Qxe4+",
-      "Be2",
-      "Na6",
-      "Bd6",
-      "Qxg2",
-      "Qd2",
-      "Nf6",
-      "Bf3",
-      "Qg6",
-      "O-O-O",
-      "e5",
-      "Bxe5",
-      "Be6",
-      "Ne2",
-      "Qf5",
-      "Bf4"
-    ]
-  },
-  {
-    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
-    "name": "Queen's Pawn Game: London System",
-    "moves": [
-      "Nf6",
-      "Nf3",
-      "d5",
-      "Bf4",
-      "e6",
-      "e3",
-      "c5",
-      "c3",
-      "Bd6",
-      "Bxd6",
-      "Qxd6",
-      "Nbd2",
-      "Nbd7",
-      "Bb5",
-      "O-O",
-      "Bxd7",
-      "Bxd7",
-      "O-O",
-      "a5"
+      "e4"
     ]
   },
   {
@@ -585,51 +408,7 @@
       "g6",
       "Nc3",
       "Bg7",
-      "e4",
-      "c6",
-      "e5",
-      "Ng8",
-      "Bf4"
-    ]
-  },
-  {
-    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
-    "name": "Queen's Pawn Game: London System",
-    "moves": [
-      "Nf6",
-      "Nf3",
-      "d5",
-      "Bf4",
-      "e6",
-      "e3",
-      "c5",
-      "c3",
-      "Bd6",
-      "Bxd6",
-      "Qxd6",
-      "Bb5+",
-      "Nbd7",
-      "Ne5",
-      "O-O",
-      "Nxd7",
-      "Bxd7",
-      "Bxd7",
-      "Nxd7",
-      "O-O",
-      "c4"
-    ]
-  },
-  {
-    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
-    "name": "Indian Defense",
-    "moves": [
-      "Nf6",
-      "Bf4",
-      "d5",
-      "e3",
-      "c5",
-      "Nd2",
-      "Qb6"
+      "e4"
     ]
   },
   {
@@ -655,31 +434,7 @@
       "e6",
       "Nc3",
       "Bb4",
-      "Bxc4",
-      "Nf6",
-      "e5",
-      "Nd5",
-      "Bd2"
-    ]
-  },
-  {
-    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Semi-Slav Defense: Marshall Gambit",
-    "moves": [
-      "d4",
-      "d5",
-      "c4",
-      "e6",
-      "Nc3",
-      "c6",
-      "e4",
-      "Bb4",
-      "cxd5",
-      "exd5",
-      "e5",
-      "Ne7",
-      "a3"
+      "Bxc4"
     ]
   }
-  
 ]
