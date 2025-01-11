@@ -489,7 +489,9 @@
       "d5",
       "Nc3",
       "dxe4",
-      "Nxe4"
+      "Nxe4",
+      "Nf6",
+      "Nxf6+"
     ]
   },
   {
@@ -907,6 +909,171 @@
       "c4",
       "b6",
       "f3"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "C10 French Defense: Rubinstein Variation, Blackburne Defense",
+    "moves": [
+      "d4",
+      "e6",
+      "e4",
+      "d5",
+      "Nc3",
+      "dxe4",
+      "Nxe4",
+      "Nd7",
+      "Nf3"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "C19 French Defense: Winawer Variation, Advance Variation",
+    "moves": [
+      "d4",
+      "e6",
+      "e4",
+      "d5",
+      "Nc3",
+      "Bb4",
+      "e5",
+      "c5",
+      "a3",
+      "Bxc3+",
+      "bxc3",
+      "Ne7",
+      "h4"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "C18 French Defense: Winawer Variation, Classical Variation",
+    "moves": [
+      "d4",
+      "e6",
+      "e4",
+      "d5",
+      "Nc3",
+      "Bb4",
+      "e5",
+      "c5",
+      "a3",
+      "Bxc3+",
+      "bxc3",
+      "Qc7",
+      "Qg4",
+      "f5",
+      "Qg3"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "C19 French Defense: Winawer Variation, Poisoned Pawn Variation",
+    "moves": [
+      "d4",
+      "e6",
+      "e4",
+      "d5",
+      "Nc3",
+      "Bb4",
+      "e5",
+      "c5",
+      "a3",
+      "Bxc3+",
+      "bxc3",
+      "Qc7",
+      "Qg4",
+      "Ne7",
+      "Qxg7"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "C18 French Defense: Winawer Variation, Portisch-Hook Variation",
+    "moves": [
+      "d4",
+      "e6",
+      "e4",
+      "d5",
+      "Nc3",
+      "Bb4",
+      "e5",
+      "c5",
+      "a3",
+      "Bxc3+",
+      "bxc3",
+      "Qa5",
+      "Bd2"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "C17 French Defense: Winawer Variation, Maróczy-Wallis Variation",
+    "moves": [
+      "d4",
+      "e6",
+      "e4",
+      "d5",
+      "Nc3",
+      "Bb4",
+      "e5",
+      "c5",
+      "a3",
+      "cxd4",
+      "axb4",
+      "dxc3",
+      "Qg4"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "C17 French Defense: Winawer Variation, Retreat Variation",
+    "moves": [
+      "d4",
+      "e6",
+      "e4",
+      "d5",
+      "Nc3",
+      "Bb4",
+      "e5",
+      "c5",
+      "a3",
+      "Ba5",
+      "b4",
+      "cxb4",
+      "Nb5"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "C17 French Defense: Winawer Variation, Retreat Variation, Armenian Line",
+    "moves": [
+      "d4",
+      "e6",
+      "e4",
+      "d5",
+      "Nc3",
+      "Bb4",
+      "e5",
+      "c5",
+      "a3",
+      "Ba5",
+      "b4",
+      "cxd4",
+      "Nb5"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "C10 Sicilian Defense: Marshall Gambit",
+    "moves": [
+      "d4",
+      "e6",
+      "e4",
+      "d5",
+      "Nc3",
+      "c5",
+      "exd5"
     ]
   }
 ]
