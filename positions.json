@@ -1,7 +1,7 @@
 [
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Queen's Gambit Declined: Ragozin Defense",
+    "name": "D38 Queen's Gambit Declined: Ragozin Defense",
     "moves": [
       "d4",
       "Nf6",
@@ -16,7 +16,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Queen's Gambit Declined: Marshall Defense",
+    "name": "D06 Queen's Gambit Declined: Marshall Defense",
     "moves": [
       "d4",
       "d5",
@@ -29,7 +29,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Queen's Gambit Declined: Queen's Night Variation",
+    "name": "D31 Queen's Gambit Declined: Queen's Night Variation",
     "moves": [
       "d4",
       "d5",
@@ -40,7 +40,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Queen's Gambit Declined: Three Knights Variation",
+    "name": "D37 Queen's Gambit Declined: Three Knights Variation",
     "moves": [
       "d4",
       "Nf6",
@@ -53,7 +53,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Queen's Gambit Declined: Marshall Defense (Trapped Queen)",
+    "name": "D06 Queen's Gambit Declined: Marshall Defense (Trapped Queen)",
     "moves": [
       "d4",
       "Nf6",
@@ -66,7 +66,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Queen's Gambit Declined: Semi-Tarrasch Defense",
+    "name": "D41 Queen's Gambit Declined: Semi-Tarrasch Defense",
     "moves": [
       "d4",
       "Nf6",
@@ -81,7 +81,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense: Lasker-Pelikan Variation",
+    "name": "B33 Sicilian Defense: Lasker-Pelikan Variation",
     "moves": [
       "c5",
       "Nf3",
@@ -98,7 +98,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense: Lasker-Pelikan Variation, Retreat Variation",
+    "name": "B33 Sicilian Defense: Lasker-Pelikan Variation, Retreat Variation",
     "moves": [
       "c5",
       "d4",
@@ -115,7 +115,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense: Lasker-Pelikan Variation, Exchange Variation",
+    "name": "B33 Sicilian Defense: Lasker-Pelikan Variation, Exchange Variation",
     "moves": [
       "c5",
       "Nf3",
@@ -132,7 +132,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense: Old Sicilian",
+    "name": "B30 Sicilian Defense: Old Sicilian",
     "moves": [
       "c5",
       "Nf3",
@@ -143,7 +143,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense: Lasker-Dunne Attack",
+    "name": "B20 Sicilian Defense: Lasker-Dunne Attack",
     "moves": [
       "c5",
       "g3",
@@ -156,7 +156,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense: Alapin Variation, Barmen Defense",
+    "name": "B22 Sicilian Defense: Alapin Variation, Barmen Defense",
     "moves": [
       "c5",
       "c3",
@@ -171,7 +171,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense: McDonnell Attack",
+    "name": "B21 Sicilian Defense: McDonnell Attack",
     "moves": [
       "c5",
       "f4",
@@ -182,7 +182,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense: Alapin Variation, Stoltz Attack",
+    "name": "B30 Sicilian Defense: Alapin Variation, Stoltz Attack",
     "moves": [
       "c5",
       "Nf3",
@@ -193,7 +193,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense",
+    "name": "B20 Sicilian Defense",
     "moves": [
       "c5",
       "Qf3",
@@ -204,7 +204,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense: Smith-Morra Gambit",
+    "name": "B21 Sicilian Defense: Smith-Morra Gambit",
     "moves": [
       "c5",
       "d4",
@@ -215,7 +215,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
+    "name": "B30 Sicilian Defense: Nyezhmetdinov-Rossolimo Attack",
     "moves": [
       "c5",
       "Nf3",
@@ -226,7 +226,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
-    "name": "Queen's Pawn Game: London System",
+    "name": "D02 Queen's Pawn Game: London System",
     "moves": [
       "Nf6",
       "Nf3",
@@ -237,10 +237,9 @@
       "c5"
     ]
   },
-  
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Benoni Defense: French Benoni",
+    "name": "A43 Benoni Defense: French Benoni",
     "moves": [
       "d4",
       "e6",
@@ -251,7 +250,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
-    "name": "Rapport-Jobava System",
+    "name": "D01 Rapport-Jobava System",
     "moves": [
       "Nf6",
       "Bf4",
@@ -264,7 +263,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Semi-Slav Defense",
+    "name": "D43 Semi-Slav Defense",
     "moves": [
       "d4",
       "d5",
@@ -279,7 +278,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/1P6/P1PPPPPP/RNBQKBNR b KQkq - 0 1",
-    "name": "Nimzo-Larsen Attack: Modern Variation",
+    "name": "A01 Nimzo-Larsen Attack: Modern Variation",
     "moves": [
       "e5",
       "Bb2",
@@ -288,7 +287,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Indian Defense: Budapest Defense, Alekhine Variation",
+    "name": "A52 Indian Defense: Budapest Defense, Alekhine Variation",
     "moves": [
       "d4",
       "Nf6",
@@ -303,7 +302,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "French Defense: Steinitz Variation, Boleslavsky Variation",
+    "name": "C11 French Defense: Steinitz Variation, Boleslavsky Variation",
     "moves": [
       "d4",
       "e6",
@@ -316,7 +315,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Queen's Gambit",
+    "name": "D06 Queen's Gambit",
     "moves": [
       "d4",
       "d5",
@@ -327,7 +326,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Slav Defense: Three Knights Variation",
+    "name": "D15 Slav Defense: Three Knights Variation",
     "moves": [
       "d4",
       "d5",
@@ -342,7 +341,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Slav Indian",
+    "name": "A50 Slav Indian",
     "moves": [
       "d4",
       "Nf6",
@@ -357,7 +356,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Queen's Gambit Accepted: Central Variation, Modern Defense",
+    "name": "D20 Queen's Gambit Accepted: Central Variation, Modern Defense",
     "moves": [
       "d4",
       "d5",
@@ -372,7 +371,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Semi-Slav Defense: Marshall Gambit, Main Line",
+    "name": "D31 Semi-Slav Defense: Marshall Gambit, Main Line",
     "moves": [
       "d4",
       "d5",
@@ -385,7 +384,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
-    "name": "Rapport-Jobava System",
+    "name": "D01 Rapport-Jobava System",
     "moves": [
       "Nf6",
       "Nc3",
@@ -400,7 +399,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "King's Indian Defense: Normal Variation",
+    "name": "E70 King's Indian Defense: Normal Variation",
     "moves": [
       "d4",
       "Nf6",
@@ -413,7 +412,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Old Indian Defense",
+    "name": "A53 Old Indian Defense",
     "moves": [
       "d4",
       "Nf6",
@@ -424,7 +423,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "Queen's Gambit Accepted: Saduleto Variation",
+    "name": "D20 Queen's Gambit Accepted: Saduleto Variation",
     "moves": [
       "d4",
       "d5",
@@ -435,6 +434,58 @@
       "Nc3",
       "Bb4",
       "Bxc4"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A80 Dutch Defense: Hopton Attack",
+    "moves": [
+      "d4",
+      "f5",
+      "Bg5"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A56 Benoni Defense",
+    "moves": [
+      "d4",
+      "Nf6",
+      "c4",
+      "c5",
+      "d5",
+      "e6",
+      "Nc3",
+      "exd5",
+      "cxd5",
+      "d6",
+      "e4"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A57 Benko Gambit Accepted: Modern Variation",
+    "moves": [
+      "d4",
+      "Nf6",
+      "c4",
+      "c5",
+      "d5",
+      "b5",
+      "cxb5",
+      "a6",
+      "e3"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "D07 Queen's Gambit Declined: Chigorin Defense",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "Nc6",
+      "Nf3"
     ]
   }
 ]
