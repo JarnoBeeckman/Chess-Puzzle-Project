@@ -1075,5 +1075,129 @@
       "c5",
       "exd5"
     ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Englund Gambit: Main Line",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "Nc6",
+      "Nf3",
+      "Qe7",
+      "Bg5"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Englund Gambit",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "Nc6",
+      "Nf3",
+      "d6",
+      "Bg5"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Englund Gambit: Felbecker Gambit",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "Nc6",
+      "Nf3",
+      "Bc5",
+      "Nc3"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Englund Gambit: Soller Gambit Deferred",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "Nc6",
+      "Nf3",
+      "f6",
+      "e4"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Englund Gambit: Zilbermints Gambit",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "Nc6",
+      "Nf3",
+      "Nge7",
+      "Nc3"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Englund Gambit: Hartlaub-Charlick Gambit",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "d6",
+      "Nf3"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Englund Gambit",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "Bc5",
+      "Nc3"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Englund Gambit: Soller Gambit",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "f6",
+      "e4",
+      "fxe5",
+      "Qh5+"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B00 Nimzowitsch Defense: Kennedy Variation, Hammer Gambit",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "f6",
+      "e4",
+      "Nc6",
+      "Nf3"
+    ]
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Englund Gambit: Mosquito Gambit",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "Qh4",
+      "Nf3"
+    ]
   }
 ]
