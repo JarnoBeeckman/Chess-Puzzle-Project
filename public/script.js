@@ -9,6 +9,8 @@ let setupMoveIndex = 0; // Tracks the index of the last move in history when the
 
 const chess = new Chess();
 let savedPositions = [];
+let filteredSavedPositions = [];
+let puzzleIndex = 0;
 let currentMoveIndex = 0; // Tracks the current move in the opening sequence
 let isWhite = true; // Tracks if you are playing white or black
 let moveSequence = []; // Tracks the sequence of moves (for alternating)
@@ -20,7 +22,7 @@ async function fetchPositions() {
     const response = await fetch("/positions");
     const data = await response.json();
     savedPositions = data;
-
+    
     if (savedPositions.length === 0) {
       alert("No saved positions found.");
     }
@@ -71,10 +73,32 @@ function displayPositions() {
   container.appendChild(list);
 }
 
+function shuffleArray(array) {
+  // Create a Uint32Array to hold random numbers
+  const randomBuffer = new Uint32Array(array.length);
+
+  // Generate secure random numbers
+  window.crypto.getRandomValues(randomBuffer);
+
+  // Fisher-Yates Shuffle Algorithm
+  for (let i = array.length - 1; i > 0; i--) {
+    // Generate a random index using the secure random value
+    const randomIndex = randomBuffer[i] % (i + 1);
+
+    // Swap the current element with the randomly chosen one
+    [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+  }
+
+  return array;
+}
+
+
 // Load a specific saved position
 function loadPosition(index) {
   currentIsWhite = isWhite;
-  const position = savedPositions[index];
+  if (filteredSavedPositions.length === 0)
+    filteredSavedPositions = shuffleArray(savedPositions)
+  const position = filteredSavedPositions[index];
   isWhite = position.fen.split(' ')[1] === 'w'; // Determine if you're playing as white or black
   chess.load(position.fen);
   board.position(position.fen);
@@ -99,19 +123,17 @@ function displayMessage(message, type) {
     }, 3000); // message disappears after 3 seconds
   }
 
-  function getRandomIndex(max) {
+  /*function getRandomIndex(max) {
     const randomBuffer = new Uint32Array(1);
     window.crypto.getRandomValues(randomBuffer);
     return randomBuffer[0] % max;
-}
+}*/
 
-  function loadRandomPuzzle() {
+  /*function loadRandomPuzzle() {
     // Randomly select a puzzle from savedPositions
     const randomIndex = getRandomIndex(savedPositions.length);
     loadPosition(randomIndex)
-  }
-  
-  
+  }*/
   
 // Handle move on the board
   function handleMove(source, target) {
@@ -164,39 +186,14 @@ function displayMessage(message, type) {
       currentMoveIndex++;
       if (currentMoveIndex === moveSequence.length) {
         displayMessage("Puzzle completed!", "success");
-        setTimeout(loadRandomPuzzle, 100);
+        
+        setTimeout(nextPuzzle, 100);
       } else {
         setTimeout(makeOpponentMove, 100);
       }
     }
   }
-
-
   
-  
-  // Function to play the opponent's move automatically
-  function playOpponentMove() {
-    if (currentMoveIndex < moveSequence.length) {
-      const opponentMove = moveSequence[currentMoveIndex];
-  
-      // Make the opponent's move on the board
-      const move = chess.move(opponentMove);
-      board.position(chess.fen());  // Update the board to reflect the move
-  
-      console.log("Opponent moves:", move);
-  
-      // Increment the move index after the opponent's move
-      currentMoveIndex++;
-  
-      // Check if the sequence is complete
-      if (currentMoveIndex >= moveSequence.length) {
-        displayMessage("You completed the opening sequence!", "success");
-        loadRandomPuzzle();  // Load a new puzzle when the sequence is completed
-      }
-    }
-  }
-  
-
 // Automatically make the opponent's move
 function makeOpponentMove() {
   // Get the opponent's move (the next move in the sequence)
@@ -205,7 +202,7 @@ function makeOpponentMove() {
   // Parse the SAN notation to make the move
   const move = chess.move(opponentMove);
   if (move) {
-    console.log("Opponent's move:", move);
+    
     board.position(chess.fen());
     currentMoveIndex++; // Move to the next move in the sequence
     if (currentMoveIndex === moveSequence.length) {
@@ -214,6 +211,7 @@ function makeOpponentMove() {
   }
 }
 
+// Save to server
 async function saveNewPuzzle() {
   const puzzleNameInput = document.getElementById("puzzleNameInput");
   const puzzleName = puzzleNameInput.value.trim();
@@ -224,8 +222,6 @@ async function saveNewPuzzle() {
   }
   const moves = chess.history(); // Moves made during setup
   const puzzlemoves= moves.slice(setupMoveIndex)
-  console.log(puzzlemoves)
-  console.log(startingFen)
 
   try {
      await fetch("/positions", {
@@ -240,6 +236,7 @@ async function saveNewPuzzle() {
   fetchPositions();
 }
 
+// Setup making new puzzle to record, then send to saveNewPuzzle()
 function addnewPuzzle() {
   // Clear the chessboard and reset the chess engine
   chess.reset();
@@ -278,12 +275,18 @@ document.getElementById("setStartingPosition").addEventListener("click", () => {
 });
 }
 
+function nextPuzzle() {
+  if (puzzleIndex === filteredSavedPositions.length)
+    puzzleIndex = 0
+  else puzzleIndex++;
+  loadPosition(puzzleIndex)
+}
+
 // Set up event listeners
 document.getElementById("addPuzzle").addEventListener("click", addnewPuzzle);
 document.getElementById("editPuzzle").addEventListener("click", displayPositions);
-document.getElementById("startPuzzle").addEventListener("click", loadRandomPuzzle);
-
-
+document.getElementById("startPuzzle").addEventListener("click", ()=>loadPosition(puzzleIndex));
+document.getElementById("skipPuzzle").addEventListener("click", nextPuzzle);
 
 // Initial fetch of positions
 fetchPositions();

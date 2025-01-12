@@ -46,6 +46,11 @@ button#startPuzzle {
   color: white;
 }
 
+button#skipPuzzle {
+  color: white;
+  background-color: purple;
+}
+
 button:hover {
   opacity: 0.9;
 }
