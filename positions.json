@@ -53,7 +53,7 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "D06 Queen's Gambit Declined: Marshall Defense (Trapped Queen)",
+    "name": "D06 Queen's Gambit Declined: Marshall Defense",
     "moves": [
       "d4",
       "Nf6",

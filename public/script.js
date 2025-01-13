@@ -33,7 +33,7 @@ async function fetchPositions() {
 }
 
 // Display saved positions
-function displayPositions() {
+/*function displayPositions() {
   const container = document.getElementById("message");
   container.innerHTML = "<h3>Saved Positions:</h3>";
 
@@ -71,7 +71,82 @@ function displayPositions() {
   });
 
   container.appendChild(list);
+}*/
+
+// Filter and display positions
+function filterPositions() {
+  const container = document.getElementById("message");
+  container.innerHTML = "<h3>Filter Puzzles:</h3>";
+
+  // Create filter inputs
+  const filterContainer = document.createElement("div");
+  filterContainer.innerHTML = `
+    <label for="codeFilter">Filter by Code:</label>
+    <input type="text" id="codeFilter" placeholder="e.g., A00, D40"><br/>
+
+    <label for="nameFilter">Filter by Name:</label>
+    <input type="text" id="nameFilter" placeholder="e.g., Queen's Gambit"><br/>
+
+    <label for="colorFilter">Filter by Color:</label>
+    <select id="colorFilter">
+      <option value="">Any</option>
+      <option value="w">White</option>
+      <option value="b">Black</option>
+    </select><br/>
+
+    <button id="applyFilter">Apply Filter</button>
+  `;
+  container.appendChild(filterContainer);
+
+  const resultsContainer = document.createElement("div");
+  resultsContainer.id = "resultsContainer";
+  container.appendChild(resultsContainer);
+
+  // Add event listener for filtering
+  document.getElementById("applyFilter").addEventListener("click", () => {
+    const codeFilter = document.getElementById("codeFilter").value.trim().toUpperCase();
+    const nameFilter = document.getElementById("nameFilter").value.trim().toLowerCase();
+    const colorFilter = document.getElementById("colorFilter").value;
+
+    // Filter saved positions based on the inputs
+    filteredSavedPositions = savedPositions.filter(position => {
+      const codeMatches = codeFilter ? position.name.toUpperCase().startsWith(codeFilter) : true;
+      const nameMatches = nameFilter ? position.name.toLowerCase().includes(nameFilter) : true;
+      const colorMatches = colorFilter ? position.fen.split(' ')[1] === colorFilter : true;
+      return codeMatches && nameMatches && colorMatches;
+    });
+
+    // Display filtered results
+    displayFilteredPositions(filteredSavedPositions, resultsContainer);
+  });
 }
+
+// Helper function to display filtered positions
+function displayFilteredPositions(positions, container) {
+  container.innerHTML = `<h4>Filtered ${filteredSavedPositions.length} Results from ${savedPositions.length} puzzles:</h4>`;
+
+  if (positions.length === 0) {
+    container.innerHTML += "<p>No matching puzzles found.</p>";
+    return;
+  }
+
+  const list = document.createElement("ul");
+  positions.forEach((position, index) => {
+    const listItem = document.createElement("li");
+
+    listItem.innerHTML = `
+      <strong>Position ${index + 1}</strong>:<br />
+      Name: ${position.name}<br />
+      Color: ${position.fen.split(' ')[1] === 'w' ? "White" : "Black"}<br />
+      Moves: ${position.moves.join(", ")}
+    `;
+
+    list.appendChild(listItem);
+  });
+
+  container.appendChild(list);
+}
+
 
 function shuffleArray(array) {
   // Create a Uint32Array to hold random numbers
@@ -93,7 +168,7 @@ function shuffleArray(array) {
 }
 
 
-// Load a specific saved position
+// Load a saved position
 function loadPosition(index) {
   currentIsWhite = isWhite;
   if (filteredSavedPositions.length === 0)
@@ -250,7 +325,7 @@ function addnewPuzzle() {
   // Clear the current puzzle state
   moveSequence = []; // Clear the move sequence
   currentMoveIndex = 0; // Reset the move index
-  isWhite = true; // Reset to white's turn
+  
   
   // Display a form to capture the puzzle name
   const messageContainer = document.getElementById("message");
@@ -276,7 +351,7 @@ document.getElementById("setStartingPosition").addEventListener("click", () => {
 }
 
 function nextPuzzle() {
-  if (puzzleIndex === filteredSavedPositions.length)
+  if (puzzleIndex >= filteredSavedPositions.length-1)
     puzzleIndex = 0
   else puzzleIndex++;
   loadPosition(puzzleIndex)
@@ -284,8 +359,7 @@ function nextPuzzle() {
 
 // Set up event listeners
 document.getElementById("addPuzzle").addEventListener("click", addnewPuzzle);
-document.getElementById("editPuzzle").addEventListener("click", displayPositions);
-document.getElementById("startPuzzle").addEventListener("click", ()=>loadPosition(puzzleIndex));
+document.getElementById("filterPuzzle").addEventListener("click", filterPositions);
 document.getElementById("skipPuzzle").addEventListener("click", nextPuzzle);
 
 // Initial fetch of positions

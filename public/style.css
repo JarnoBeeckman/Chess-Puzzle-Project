@@ -31,12 +31,12 @@ button {
   font-size: 16px;
 }
 
-button#addPuzzle, .save {
+button#addPuzzle, .save, button#applyFilter {
   background-color: #4CAF50;
   color: white;
 }
 
-button#editPuzzle, .flip {
+button#filterPuzzle, .flip {
   background-color: #FF9800;
   color: white;
 }
