@@ -1284,5 +1284,235 @@
       "Nf3"
     ],
     "id": 84
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B09 Pirc Defense: Austrian Attack, Weiss Variation",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "Bg7",
+      "Nc3",
+      "d6",
+      "f4",
+      "Nf6",
+      "Nf3",
+      "O-O",
+      "Bd3"
+    ],
+    "id": 85
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B09 Pirc Defense: Austrian Attack, Dragon Formation",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "Bg7",
+      "Nc3",
+      "d6",
+      "f4",
+      "Nf6",
+      "Nf3",
+      "c5",
+      "dxc5"
+    ],
+    "id": 86
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B06 Modern Defense: Standard Line",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "Bg7",
+      "Nc3",
+      "e6",
+      "h4"
+    ],
+    "id": 87
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B06 Pterodactyl Defense: Eastern, Anhanguera",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "Bg7",
+      "Nc3",
+      "c5",
+      "Be3"
+    ],
+    "id": 88
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B06 Modern Defense: Mongredien Defense",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "Bg7",
+      "Nc3",
+      "b6",
+      "Nf3",
+      "Bb7",
+      "h4"
+    ],
+    "id": 89
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B06 Modern Defense: Lizard Defense, Mittenberger Gambit",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "Bg7",
+      "Nc3",
+      "d5",
+      "exd5"
+    ],
+    "id": 90
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B07 Pirc Defense",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "d6",
+      "Nc3",
+      "Nf6",
+      "Be3"
+    ],
+    "id": 91
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B06 Rat Defense: Accelerated Gurgenidze",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "d6",
+      "Nc3",
+      "c6",
+      "a3"
+    ],
+    "id": 92
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B06 Modern Defense: Norwegian Defense",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "Nf6",
+      "e5"
+    ],
+    "id": 93
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Queen's Pawn Game: Modern Defense",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "e6",
+      "h4"
+    ],
+    "id": 94
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Queen's Pawn Game: Modern Defense",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "d5",
+      "exd5",
+      "Qxd5",
+      "Nf3"
+    ],
+    "id": 95
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Queen's Pawn Game: Modern Defense",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "d5",
+      "exd5",
+      "Bg7",
+      "Bb5+"
+    ],
+    "id": 96
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B01 Scandinavian Defense: Richter Variation",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "d5",
+      "exd5",
+      "Nf6",
+      "c4"
+    ],
+    "id": 97
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Queen's Pawn Game: Modern Defense",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "c6",
+      "Nc3",
+      "Bg7",
+      "f4"
+    ],
+    "id": 98
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B15 Caro-Kann Defense: Gurgenidze System",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "c6",
+      "Nc3",
+      "d5",
+      "e5"
+    ],
+    "id": 99
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "B06 Modern Defense: Fianchetto Gambit",
+    "moves": [
+      "d4",
+      "g6",
+      "e4",
+      "f5",
+      "exf5",
+      "gxf5",
+      "Qh5#"
+    ],
+    "id": 100
   }
 ]
