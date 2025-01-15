@@ -118,6 +118,7 @@ function filterPositions() {
 
     // Display filtered results
     displayFilteredPositions(filteredSavedPositions, resultsContainer);
+    puzzleIndex = filteredSavedPositions.length;
   });
 }
 
@@ -179,7 +180,7 @@ function loadPosition(index) {
   board.position(position.fen);
   currentMoveIndex = 0; // Reset the move index for the new position
   const puzzleNameElement = document.getElementById("puzzleName");
-  puzzleNameElement.textContent = `${position.name || "Unnamed"}`;
+  puzzleNameElement.textContent = `${position.name || "Unnamed"} (${index+1}/${filteredSavedPositions.length})`;
   
   moveSequence = position.moves; // Set the move sequence to follow
   if ((currentIsWhite && !isWhite) || (!currentIsWhite && isWhite)) {
@@ -302,7 +303,7 @@ async function saveNewPuzzle() {
      await fetch("/positions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: puzzleName, fen: startingFen, moves: puzzlemoves }),
+      body: JSON.stringify({ name: puzzleName, fen: startingFen, moves: puzzlemoves, id: savedPositions.length }),
     });
     alert("Puzzle saved")
   } catch (error) {

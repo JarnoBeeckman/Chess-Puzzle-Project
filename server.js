@@ -43,10 +43,10 @@ app.get("/positions", (req, res) => {
 
 // Endpoint to save a new position
 app.post("/positions", (req, res) => {
-  const { fen, name, moves } = req.body;
-  if (fen && moves && name) {
+  const { fen, name, moves, id } = req.body;
+  if (fen && moves && name && id) {
     const savedPositions = getSavedPositions();  // Get the current saved positions
-    savedPositions.push({ fen, name, moves });  // Add the new position
+    savedPositions.push({ fen, name, moves, id });  // Add the new position
     savePositions(savedPositions);  // Save the updated list back to positions.json
     res.json({ message: "Position saved successfully!" });
   } else {
@@ -55,7 +55,7 @@ app.post("/positions", (req, res) => {
 });
 
 // Endpoint to update an existing position by index
-app.put("/positions/:index", (req, res) => {
+/*app.put("/positions/:index", (req, res) => {
   const { index } = req.params; // Get index from the URL
   const { moves } = req.body; // Updated moves from the request body
 
@@ -69,7 +69,7 @@ app.put("/positions/:index", (req, res) => {
   } else {
     res.status(400).json({ success: false, message: "Invalid index or data provided." });
   }
-});
+});*/
 
 
 // Serve the `index.html` file on the root route
