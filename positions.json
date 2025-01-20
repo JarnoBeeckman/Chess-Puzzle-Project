@@ -1514,5 +1514,115 @@
       "Qh5#"
     ],
     "id": 100
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A43 Benoni Defense: Old Benoni",
+    "moves": [
+      "d4",
+      "c5",
+      "d5",
+      "d6",
+      "e4"
+    ],
+    "id": 101
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A43 Benoni Defense: Old Benoni",
+    "moves": [
+      "d4",
+      "c5",
+      "d5",
+      "e6",
+      "c4",
+      "exd5",
+      "cxd5"
+    ],
+    "id": 102
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A43 Benoni Defense: Old Benoni",
+    "moves": [
+      "d4",
+      "c5",
+      "d5",
+      "e6",
+      "c4",
+      "d6",
+      "e4"
+    ],
+    "id": 103
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A60 Benoni Defense: Modern Variation",
+    "moves": [
+      "d4",
+      "c5",
+      "d5",
+      "e6",
+      "c4",
+      "Nf6",
+      "Nc3"
+    ],
+    "id": 104
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A43 Benoni Defense: Benoni-Indian Defense",
+    "moves": [
+      "d4",
+      "c5",
+      "d5",
+      "Nf6",
+      "Nc3",
+      "d6",
+      "e4"
+    ],
+    "id": 105
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A43 Benoni Defense: Woozle",
+    "moves": [
+      "d4",
+      "c5",
+      "d5",
+      "Nf6",
+      "Nc3",
+      "Qa5",
+      "Bd2"
+    ],
+    "id": 106
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A44 Benoni Defense: Semi-Benoni",
+    "moves": [
+      "d4",
+      "c5",
+      "d5",
+      "e5",
+      "e4",
+      "d6",
+      "a4"
+    ],
+    "id": 107
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A43 Benoni Defense: Benoni-Staunton Gambit",
+    "moves": [
+      "d4",
+      "c5",
+      "d5",
+      "f5",
+      "e4",
+      "fxe4",
+      "Nh3"
+    ],
+    "id": 108
   }
 ]
