@@ -5,6 +5,7 @@ const board = Chessboard("board", {
 });
 
 let startingFen = "";
+let storageKey = "faults"
 let setupMoveIndex = 0; // Tracks the index of the last move in history when the starting position is set
 
 const chess = new Chess();
@@ -14,6 +15,9 @@ let puzzleIndex = 0;
 let currentMoveIndex = 0; // Tracks the current move in the opening sequence
 let isWhite = true; // Tracks if you are playing white or black
 let moveSequence = []; // Tracks the sequence of moves (for alternating)
+let faultList = getFromLocalStorage(storageKey);
+let faultcounter = 0;
+let isFaultOnly = 0;
 
 
 // Fetch saved positions
@@ -32,46 +36,24 @@ async function fetchPositions() {
   }
 }
 
-// Display saved positions
-/*function displayPositions() {
-  const container = document.getElementById("message");
-  container.innerHTML = "<h3>Saved Positions:</h3>";
+function getFromLocalStorage(key) {
+  try {
+      const jsonData = localStorage.getItem(key); // Haalt de JSON-string op
+      return jsonData ? JSON.parse(jsonData) : []; // Converteert terug naar het originele formaat
+  } catch (error) {
+      console.error("Er is een fout opgetreden bij het ophalen van local storage:", error);
+      return null;
+  }
+}
 
-  const list = document.createElement("ul");
-  savedPositions.forEach((position, index) => {
-    const listItem = document.createElement("li");
-
-    // Show FEN and moves
-    listItem.innerHTML = `
-      <strong>Position ${index + 1}</strong>:<br />
-      Name: ${position.name} <br/>
-      Color: ${position.fen.split(' ')[1] === 'w' ? "White" : "Black"}<br />
-      Moves: <input type="text" id="moves-${index}" value="${position.moves.join(", ")}"}/><br />
-      <button class="save" id="save-${index}")">Save</button>
-    `;
-    listItem.querySelector(`#save-${index}`).addEventListener("click", async () => {
-      const updatedMoves = document.getElementById(`moves-${index}`).value.split(",").map(move => move.trim());
-      position.moves = updatedMoves;
-
-      try {
-         await fetch(`/positions/${index}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ moves: updatedMoves }),
-        });
-
-      } catch (error) {
-        console.error("Error updating position:", error);
-      }
-    });
-
-    list.appendChild(listItem);
-  });
-
-  container.appendChild(list);
-}*/
+function saveToLocalStorage(key, value) {
+  try {
+      const jsonData = JSON.stringify(value); // Converteert de data naar een JSON-string
+      localStorage.setItem(key, jsonData); // Slaat de JSON-string op in de local storage
+  } catch (error) {
+      console.error("Er is een fout opgetreden bij het opslaan naar local storage:", error);
+  }
+}
 
 // Filter and display positions
 function filterPositions() {
@@ -94,6 +76,12 @@ function filterPositions() {
       <option value="b">Black</option>
     </select><br/>
 
+    <label for="faultFilter">Faults-made-on only:</label>
+    <select id="faultFilter">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select><br/>
+
     <button id="applyFilter">Apply Filter</button>
   `;
   container.appendChild(filterContainer);
@@ -107,18 +95,22 @@ function filterPositions() {
     const codeFilter = document.getElementById("codeFilter").value.trim().toUpperCase();
     const nameFilter = document.getElementById("nameFilter").value.trim().toLowerCase();
     const colorFilter = document.getElementById("colorFilter").value;
+    isFaultOnly = document.getElementById("faultFilter").value;
 
     // Filter saved positions based on the inputs
     filteredSavedPositions = savedPositions.filter(position => {
       const codeMatches = codeFilter ? position.name.toUpperCase().startsWith(codeFilter) : true;
       const nameMatches = nameFilter ? position.name.toLowerCase().includes(nameFilter) : true;
       const colorMatches = colorFilter ? position.fen.split(' ')[1] === colorFilter : true;
-      return codeMatches && nameMatches && colorMatches;
+      const faultMatches = isFaultOnly > 0 ? faultList[position.id] > 0 : true;
+      return codeMatches && nameMatches && colorMatches && faultMatches;
     });
 
     // Display filtered results
+    filteredSavedPositions = shuffleArray(filteredSavedPositions)
     displayFilteredPositions(filteredSavedPositions, resultsContainer);
     puzzleIndex = filteredSavedPositions.length;
+    nextPuzzle()
   });
 }
 
@@ -148,7 +140,6 @@ function displayFilteredPositions(positions, container) {
   container.appendChild(list);
 }
 
-
 function shuffleArray(array) {
   // Create a Uint32Array to hold random numbers
   const randomBuffer = new Uint32Array(array.length);
@@ -168,8 +159,7 @@ function shuffleArray(array) {
   return array;
 }
 
-
-// Load a saved position
+// Load a puzzle
 function loadPosition(index) {
   currentIsWhite = isWhite;
   if (filteredSavedPositions.length === 0)
@@ -181,7 +171,7 @@ function loadPosition(index) {
   currentMoveIndex = 0; // Reset the move index for the new position
   const puzzleNameElement = document.getElementById("puzzleName");
   puzzleNameElement.textContent = `${position.name || "Unnamed"} (${index+1}/${filteredSavedPositions.length})`;
-  
+  faultcounter = 0;
   moveSequence = position.moves; // Set the move sequence to follow
   if ((currentIsWhite && !isWhite) || (!currentIsWhite && isWhite)) {
     board.flip(); // Flip the board if you're playing black
@@ -255,13 +245,24 @@ function displayMessage(message, type) {
       const expectedMove = moveSequence[currentMoveIndex];
       if (move.san !== expectedMove) {
         displayMessage(`Wrong move! Expected: ${expectedMove}`, "error");
+        faultcounter++;
         chess.undo();
         board.position(chess.fen());
         return "snapback";
       }
       currentMoveIndex++;
       if (currentMoveIndex === moveSequence.length) {
-        displayMessage("Puzzle completed!", "success");
+
+        faultList[filteredSavedPositions[puzzleIndex]?.id] = faultcounter
+        saveToLocalStorage(storageKey,faultList)
+
+        if (isFaultOnly && faultcounter === 0) {
+          filteredSavedPositions.splice(puzzleIndex,1)
+        }
+          
+        if (filteredSavedPositions.length === 0)
+          displayMessage(`Completed all, resetting to default`, "success");
+        else displayMessage(`Completed ${faultcounter > 0 ? 'with faults' : '' }`, "success");
         
         setTimeout(nextPuzzle, 100);
       } else {
