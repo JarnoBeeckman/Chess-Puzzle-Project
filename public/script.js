@@ -184,9 +184,10 @@ function displayMessage(message, type) {
     messageContainer.innerHTML = `<span class="${type}">${message}</span>`;
     
     // Optional: If you want the message to disappear after a few seconds
-    setTimeout(() => {
+    /*setTimeout(() => {
       messageContainer.innerHTML = "";
     }, 3000); // message disappears after 3 seconds
+    */
   }
 
   /*function getRandomIndex(max) {
@@ -256,7 +257,7 @@ function displayMessage(message, type) {
         faultList[filteredSavedPositions[puzzleIndex]?.id] = faultcounter
         saveToLocalStorage(storageKey,faultList)
 
-        if (isFaultOnly && faultcounter === 0) {
+        if (isFaultOnly > 0 && faultcounter === 0) {
           filteredSavedPositions.splice(puzzleIndex,1)
         }
           
