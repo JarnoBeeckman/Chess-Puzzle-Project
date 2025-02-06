@@ -261,8 +261,11 @@ function displayMessage(message, type) {
           filteredSavedPositions.splice(puzzleIndex,1)
         }
           
-        if (filteredSavedPositions.length === 0)
+        if (filteredSavedPositions.length === 0) {
           displayMessage(`Completed all, resetting to default`, "success");
+          isFaultOnly = 0;
+        }
+          
         else displayMessage(`Completed ${faultcounter > 0 ? 'with faults' : '' }`, "success");
         
         setTimeout(nextPuzzle, 100);
