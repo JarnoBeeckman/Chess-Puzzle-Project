@@ -119,27 +119,37 @@ function filterPositions() {
     // Display filtered results
     
     if (includeMiddle) {
-      const newPositions = [];
+      filteredSavedPositions = addMiddleGames(filteredSavedPositions,true)
+    }
+    else displayFilteredPositions(filteredSavedPositions, resultsContainer);
 
-      filteredSavedPositions.forEach((pos) => {
+    filteredSavedPositions = shuffleArray(filteredSavedPositions)
+    puzzleIndex = filteredSavedPositions.length;
+    nextPuzzle()
+  });
+}
+
+function addMiddleGames(list,wasFiltered) {
+
+  const newPositions = [];
+
+      list.forEach((pos) => {
       const relatedMiddlegames = savedMiddlegames.filter(x => x.fk === pos.id);
 
       if (relatedMiddlegames.length > 0) {
         relatedMiddlegames.forEach(middlegame => {
         newPositions.push({ ...pos, middle: middlegame.moves });
       });
+        pos.middle = relatedMiddlegames
       } else {
         newPositions.push({ ...pos }); // Keep positions without middlegames
         }
   
       });
-      filteredSavedPositions = newPositions;
-    }
-    filteredSavedPositions = shuffleArray(filteredSavedPositions)
-    displayFilteredPositions(filteredSavedPositions, resultsContainer);
-    puzzleIndex = filteredSavedPositions.length;
-    nextPuzzle()
-  });
+      if (wasFiltered)
+          displayFilteredPositions(list, resultsContainer);
+
+      return newPositions;
 }
 
 // Helper function to display filtered positions
@@ -154,13 +164,12 @@ function displayFilteredPositions(positions, container) {
   const list = document.createElement("ul");
   positions.forEach((position, index) => {
     const listItem = document.createElement("li");
-
     listItem.innerHTML = `
       <strong>Position ${index + 1}</strong>:<br />
       Name: ${position.name}<br />
       Color: ${position.fen.split(' ')[1] === 'w' ? "White" : "Black"}<br />
       Moves: ${position.moves.join(", ")} <br/>
-      ${position.middle ? `Line: ${position.middle.join(", ")}`:""}<br/>
+      ${position.middle ? position.middle.map((mid,ind)=>{return `Line ${ind+1}: ${mid.moves.join(", ")}<br/>`}):""}
     `;
 
     // Create button separately
@@ -205,8 +214,8 @@ function shuffleArray(array) {
 function loadPosition(index) {
   currentIsWhite = isWhite;
   if (filteredSavedPositions.length === 0) {
-    isFaultOnly = 0;
-    filteredSavedPositions = shuffleArray(savedPositions)
+    isFaultOnly = 0; //it also comes here after completing all fault-only puzzles
+    filteredSavedPositions = shuffleArray(addMiddleGames(savedPositions))
   }
     
   const position = filteredSavedPositions[index];

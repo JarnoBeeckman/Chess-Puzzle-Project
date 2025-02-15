@@ -59,7 +59,7 @@ app.post("/positions/opening", (req, res) => {
   if (fen && moves && name && id) {
     const savedPositions = getSavedPositions();  // Get the current saved positions
     savedPositions.openings.push({ fen, name, moves, id });  // Add the new position
-    savePositions(savedPositions);  // Save the updated list back to positions.json
+    savePositions(savedPositions.openings);  // Save the updated list back to positions.json
     res.json({ message: "Position saved successfully!" });
   } else {
     res.status(400).json({ message: "Invalid data provided." });

@@ -2196,5 +2196,19 @@
       "g6"
     ],
     "id": 152
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "name": "B33 Sicilian Defense: Open",
+    "moves": [
+      "c5",
+      "Nf3",
+      "Nc6",
+      "d4",
+      "cxd4",
+      "Nxd4",
+      "Nf6"
+    ],
+    "id": 153
   }
 ]
