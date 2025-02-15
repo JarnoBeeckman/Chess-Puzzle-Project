@@ -10,6 +10,7 @@ let setupMoveIndex = 0; // Tracks the index of the last move in history when the
 
 const chess = new Chess();
 let savedPositions = [];
+let savedMiddlegames = []
 let filteredSavedPositions = [];
 let puzzleIndex = 0;
 let currentMoveIndex = 0; // Tracks the current move in the opening sequence
@@ -18,6 +19,7 @@ let moveSequence = []; // Tracks the sequence of moves (for alternating)
 let faultList = getFromLocalStorage(storageKey);
 let faultcounter = 0;
 let isFaultOnly = 0;
+let includeMiddle = 1;
 
 
 // Fetch saved positions
@@ -25,7 +27,8 @@ async function fetchPositions() {
   try {
     const response = await fetch("/positions");
     const data = await response.json();
-    savedPositions = data;
+    savedPositions = data.openings;
+    savedMiddlegames = data.middlegames
     
     if (savedPositions.length === 0) {
       alert("No saved positions found.");
@@ -76,10 +79,16 @@ function filterPositions() {
       <option value="b">Black</option>
     </select><br/>
 
-    <label for="faultFilter">Faults-made-on only:</label>
+    <label for="faultFilter">Faults-made only:</label>
     <select id="faultFilter">
       <option value="0">No</option>
       <option value="1">Yes</option>
+    </select><br/>
+
+    <label for="middle">Middlegames included:</label>
+    <select id="middle">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
     </select><br/>
 
     <button id="applyFilter">Apply Filter</button>
@@ -96,6 +105,7 @@ function filterPositions() {
     const nameFilter = document.getElementById("nameFilter").value.trim().toLowerCase();
     const colorFilter = document.getElementById("colorFilter").value;
     isFaultOnly = document.getElementById("faultFilter").value;
+    includeMiddle = document.getElementById("middle").value;
 
     // Filter saved positions based on the inputs
     filteredSavedPositions = savedPositions.filter(position => {
@@ -107,6 +117,24 @@ function filterPositions() {
     });
 
     // Display filtered results
+    
+    if (includeMiddle) {
+      const newPositions = [];
+
+      filteredSavedPositions.forEach((pos) => {
+      const relatedMiddlegames = savedMiddlegames.filter(x => x.fk === pos.id);
+
+      if (relatedMiddlegames.length > 0) {
+        relatedMiddlegames.forEach(middlegame => {
+        newPositions.push({ ...pos, middle: middlegame.moves });
+      });
+      } else {
+        newPositions.push({ ...pos }); // Keep positions without middlegames
+        }
+  
+      });
+      filteredSavedPositions = newPositions;
+    }
     filteredSavedPositions = shuffleArray(filteredSavedPositions)
     displayFilteredPositions(filteredSavedPositions, resultsContainer);
     puzzleIndex = filteredSavedPositions.length;
@@ -131,10 +159,24 @@ function displayFilteredPositions(positions, container) {
       <strong>Position ${index + 1}</strong>:<br />
       Name: ${position.name}<br />
       Color: ${position.fen.split(' ')[1] === 'w' ? "White" : "Black"}<br />
-      Moves: ${position.moves.join(", ")}
+      Moves: ${position.moves.join(", ")} <br/>
+      ${position.middle ? `Line: ${position.middle.join(", ")}`:""}<br/>
     `;
 
+    // Create button separately
+    const button = document.createElement("button");
+    button.textContent = "Add Middlegame";
+    button.classList.add("add");
+
+    // Attach event listener before appending
+    button.addEventListener("click", () => {
+      addnewPuzzle(position);
+    });
+
+    listItem.appendChild(button); // Append the button to the list item
     list.appendChild(listItem);
+
+    
   });
 
   container.appendChild(list);
@@ -175,7 +217,10 @@ function loadPosition(index) {
   const puzzleNameElement = document.getElementById("puzzleName");
   puzzleNameElement.textContent = `${position.name || "Unnamed"} (${index+1}/${filteredSavedPositions.length})`;
   faultcounter = 0;
-  moveSequence = position.moves; // Set the move sequence to follow
+  if (includeMiddle && position.middle)
+    moveSequence = [...position.moves, ...position.middle]
+  else
+    moveSequence = position.moves; // Set the move sequence to follow
   if ((currentIsWhite && !isWhite) || (!currentIsWhite && isWhite)) {
     board.flip(); // Flip the board if you're playing black
   }
@@ -306,7 +351,7 @@ async function saveNewPuzzle() {
   const puzzlemoves= moves.slice(setupMoveIndex)
 
   try {
-     await fetch("/positions", {
+     await fetch("/positions/opening", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: puzzleName, fen: startingFen, moves: puzzlemoves, id: savedPositions.length }),
@@ -318,16 +363,52 @@ async function saveNewPuzzle() {
   fetchPositions();
 }
 
+// Save to server
+async function saveMiddlePuzzle(position) {
+  
+  const moves = chess.history(); // Moves made during setup
+  const puzzlemoves= moves.slice(setupMoveIndex)
+
+  try {
+     await fetch("/positions/middle", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ fen: position.fen, moves: puzzlemoves, id: savedMiddlegames.length, fk:position.id}),
+    });
+    alert("Puzzle saved")
+  } catch (error) {
+    console.error("Error saving new puzzle:", error);
+  }
+  fetchPositions();
+}
+
 // Setup making new puzzle to record, then send to saveNewPuzzle()
-function addnewPuzzle() {
+function addnewPuzzle(position) {
   // Clear the chessboard and reset the chess engine
   chess.reset();
   board.position("start"); // Optional: Start with a clear board instead
 
+  setupMoveIndex = 0;
+
+  //For adding middlegames, start from chosen opening
+  if (position) {
+    isBlack = position.fen.split(' ')[1] === 'b';
+    chess.load(position.fen);
+    position.moves.forEach(move=>{
+      chess.move(move)
+      setupMoveIndex++;
+    })
+    board.position(chess.fen())
+    if (isWhite && isBlack) {
+      board.flip(); // Flip the board if needed
+    }
+  } 
+  
+
   const puzzleNameElement = document.getElementById("puzzleName");
   puzzleNameElement.textContent = `Puzzle: Adding new puzzle`;
 
-  setupMoveIndex = 0;
+  
 
   // Clear the current puzzle state
   moveSequence = []; // Clear the move sequence
@@ -336,25 +417,30 @@ function addnewPuzzle() {
   
   // Display a form to capture the puzzle name
   const messageContainer = document.getElementById("message");
+ 
   messageContainer.innerHTML = `
     <h3>Set Up a New Puzzle</h3>
-    <button id="flipBoard" class="flip">Flip Board</button> <!-- Flip Board Button -->
+    ${position?'':`<button id="flipBoard" class="flip">Flip Board</button> <!-- Flip Board Button -->
     <button id="setStartingPosition" class="save">Start recording moves</button> <!-- Set Starting Position -->
     <label for="puzzleNameInput">Puzzle Name:</label>
-    <input type="text" id="puzzleNameInput" placeholder="Enter puzzle name" />
+    <input type="text" id="puzzleNameInput" placeholder="Enter puzzle name" />`}
     <button id="saveNewPuzzle" class="save">Save Puzzle</button>
   `;
   // Add an event listener for saving the puzzle
-  document.getElementById("saveNewPuzzle").addEventListener("click", saveNewPuzzle);
-  // Flip Board Button Handler
-document.getElementById("flipBoard").addEventListener("click", () => {
-  board.flip(); // Flip the chessboard
-  isWhite = !isWhite; // Toggle isWhite flag
-});
-document.getElementById("setStartingPosition").addEventListener("click", () => {
-  startingFen = chess.fen(); // Save the current board position as the starting FEN
-  setupMoveIndex = chess.history().length; // Record the move index when the starting position is set
-});
+  
+  if (!position) {
+    document.getElementById("saveNewPuzzle").addEventListener("click", saveNewPuzzle);
+    // Flip Board Button Handler
+    document.getElementById("flipBoard").addEventListener("click", () => {
+    board.flip(); // Flip the chessboard
+    isWhite = !isWhite; // Toggle isWhite flag
+    });
+    document.getElementById("setStartingPosition").addEventListener("click", () => {
+    startingFen = chess.fen(); // Save the current board position as the starting FEN
+    setupMoveIndex = chess.history().length; // Record the move index when the starting position is set
+    });
+  } else
+    document.getElementById("saveNewPuzzle").addEventListener("click", ()=>saveMiddlePuzzle(position));
 }
 
 function nextPuzzle() {
@@ -365,7 +451,7 @@ function nextPuzzle() {
 }
 
 // Set up event listeners
-document.getElementById("addPuzzle").addEventListener("click", addnewPuzzle);
+document.getElementById("addPuzzle").addEventListener("click", ()=>addnewPuzzle());
 document.getElementById("filterPuzzle").addEventListener("click", filterPositions);
 document.getElementById("skipPuzzle").addEventListener("click", nextPuzzle);
 

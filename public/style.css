@@ -31,7 +31,12 @@ button {
   font-size: 16px;
 }
 
-button#addPuzzle, .save, button#applyFilter {
+li button {
+  font-size: 13px;
+  padding: 8px 16px;
+}
+
+button#addPuzzle, .save, button#applyFilter, .add {
   background-color: #4CAF50;
   color: white;
 }
