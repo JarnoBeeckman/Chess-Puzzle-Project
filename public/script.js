@@ -118,7 +118,7 @@ function filterPositions() {
 
     // Display filtered results
     
-    if (includeMiddle) {
+    if (includeMiddle > 0) {
       filteredSavedPositions = addMiddleGames(filteredSavedPositions,true)
     }
     else displayFilteredPositions(filteredSavedPositions, resultsContainer);
@@ -154,7 +154,7 @@ function addMiddleGames(list,wasFiltered) {
 
 // Helper function to display filtered positions
 function displayFilteredPositions(positions, container) {
-  container.innerHTML = `<h4>Filtered ${filteredSavedPositions.length} Results from ${savedPositions.length} puzzles:</h4>`;
+  container.innerHTML = `<h4>Filtered ${filteredSavedPositions.length} Results from ${savedPositions.length} openings:</h4>`;
 
   if (positions.length === 0) {
     container.innerHTML += "<p>No matching puzzles found.</p>";
@@ -239,25 +239,7 @@ function loadPosition(index) {
 function displayMessage(message, type) {
     const messageContainer = document.getElementById("message");
     messageContainer.innerHTML = `<span class="${type}">${message}</span>`;
-    
-    // Optional: If you want the message to disappear after a few seconds
-    /*setTimeout(() => {
-      messageContainer.innerHTML = "";
-    }, 3000); // message disappears after 3 seconds
-    */
   }
-
-  /*function getRandomIndex(max) {
-    const randomBuffer = new Uint32Array(1);
-    window.crypto.getRandomValues(randomBuffer);
-    return randomBuffer[0] % max;
-}*/
-
-  /*function loadRandomPuzzle() {
-    // Randomly select a puzzle from savedPositions
-    const randomIndex = getRandomIndex(savedPositions.length);
-    loadPosition(randomIndex)
-  }*/
   
 // Handle move on the board
   function handleMove(source, target) {

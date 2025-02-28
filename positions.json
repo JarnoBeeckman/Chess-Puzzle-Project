@@ -31,13 +31,19 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "name": "D31 Queen's Gambit Declined: Queen's Night Variation",
+    "name": "D35 Queen's Gambit Declined: Exchange Variation, Positional Variation",
     "moves": [
       "d4",
       "d5",
       "c4",
       "e6",
-      "Nc3"
+      "Nc3",
+      "Nf6",
+      "cxd5",
+      "exd5",
+      "Bg5",
+      "Be7",
+      "e3"
     ],
     "id": 2
   },
@@ -99,7 +105,15 @@
       "Nc3",
       "e5",
       "Ndb5",
-      "d6"
+      "d6",
+      "Bg5",
+      "a6",
+      "Na3",
+      "b5",
+      "Nd5",
+      "Be7",
+      "Bxf6",
+      "Bxf6"
     ],
     "id": 6
   },
@@ -2210,5 +2224,221 @@
       "Nf6"
     ],
     "id": 153
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A40 Englund Gambit",
+    "moves": [
+      "d4",
+      "e5",
+      "dxe5",
+      "Qe7",
+      "Nc3",
+      "Qxe5",
+      "Nf3"
+    ],
+    "id": 154
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "name": "B20 Sicilian Defense",
+    "moves": [
+      "c5",
+      "Bd3",
+      "g6",
+      "Nf3",
+      "Bg7"
+    ],
+    "id": 155
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "D35 Queen's Gambit Declined: Exchange Variation, Positional Variation",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "e6",
+      "Nc3",
+      "Nf6",
+      "cxd5",
+      "exd5",
+      "Bg5",
+      "c6",
+      "e3"
+    ],
+    "id": 156
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "D31 Queen's Gambit Declined: Queen's Knight Variation",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "e6",
+      "Nc3",
+      "Bb4",
+      "e3"
+    ],
+    "id": 157
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "D31 Queen's Gambit Declined: Alapin Variation",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "e6",
+      "Nc3",
+      "b6",
+      "Nf3",
+      "Bb7",
+      "cxd5",
+      "exd5",
+      "e4"
+    ],
+    "id": 158
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "D32 Tarrasch Defense: Two Knights Variation",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "e6",
+      "Nc3",
+      "c5",
+      "cxd5",
+      "exd5",
+      "Nf3"
+    ],
+    "id": 159
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "D32 Tarrasch Defense: Schara Gambit",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "e6",
+      "Nc3",
+      "c5",
+      "cxd5",
+      "cxd4",
+      "Qa4+",
+      "Bd7",
+      "Qxd4"
+    ],
+    "id": 160
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/1P6/8/P1PPPPPP/RNBQKBNR b KQkq b3 0 1",
+    "name": "A00 Polish Opening",
+    "moves": [
+      "e5",
+      "Bb2",
+      "Bxb4",
+      "Bxe5",
+      "Nf6"
+    ],
+    "id": 161
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "name": "B32 Sicilian Defense: Open",
+    "moves": [
+      "c5",
+      "Nf3",
+      "Nc6",
+      "d4",
+      "cxd4",
+      "Ng5",
+      "Nf6"
+    ],
+    "id": 162
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "A43 Benoni Defense: Benoni-Indian Defense",
+    "moves": [
+      "d4",
+      "c5",
+      "d5",
+      "Nf6",
+      "Nc3",
+      "g6",
+      "e4",
+      "d6",
+      "f4"
+    ],
+    "id": 163
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "D06 Queen's Gambit",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "Bg4",
+      "cxd5",
+      "Qxd5",
+      "h3",
+      "Bh5",
+      "Nc3"
+    ],
+    "id": 164
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "D11 Slav Defense: Modern Line",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "c6",
+      "Nf3",
+      "Bg4",
+      "Ne5",
+      "Bh5",
+      "Qb3",
+      "Nd7",
+      "Qxb7"
+    ],
+    "id": 165
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "name": "A45 Indian Defense",
+    "moves": [
+      "Nf6",
+      "e3",
+      "b6",
+      "Bd3",
+      "Bb7",
+      "Nf3",
+      "d5"
+    ],
+    "id": 166
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "name": "E24 Nimzo-Indian Defense: Sämisch Variation",
+    "moves": [
+      "Nf6",
+      "c4",
+      "e6",
+      "Nc3",
+      "Bb4",
+      "a3",
+      "Bxc3+",
+      "bxc3",
+      "b6"
+    ],
+    "id": 167
   }
 ]
