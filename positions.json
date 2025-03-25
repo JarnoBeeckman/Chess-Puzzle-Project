@@ -1959,13 +1959,17 @@
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
-    "name": "B23 Sicilian Defense: Closed, Traditional",
+    "name": "B30 Sicilian Defense: Closed, Anti-Sveshnikov Variation, with d6",
     "moves": [
       "c5",
       "Nc3",
       "Nc6",
       "Nf3",
-      "e5"
+      "e5",
+      "Bc4",
+      "Be7",
+      "d3",
+      "d6"
     ],
     "id": 133
   },
@@ -2440,5 +2444,47 @@
       "b6"
     ],
     "id": 167
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "D20 Queen's Gambit Accepted: Central Variation, McDonnell Defense",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "dxc4",
+      "e4",
+      "e5",
+      "Nf3",
+      "exd4",
+      "Bxc4"
+    ],
+    "id": 168
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "D20 Queen's Gambit Accepted: Central Variation, Greco Variation",
+    "moves": [
+      "d4",
+      "d5",
+      "c4",
+      "dxc4",
+      "e4",
+      "b5",
+      "a4"
+    ],
+    "id": 169
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+    "name": "B20 Sicilian Defense: Snyder Variation",
+    "moves": [
+      "c5",
+      "b3",
+      "d6",
+      "Bb2",
+      "Nf6"
+    ],
+    "id": 170
   }
 ]
