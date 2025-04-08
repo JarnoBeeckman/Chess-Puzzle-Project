@@ -105,15 +105,7 @@
       "Nc3",
       "e5",
       "Ndb5",
-      "d6",
-      "Bg5",
-      "a6",
-      "Na3",
-      "b5",
-      "Nd5",
-      "Be7",
-      "Bxf6",
-      "Bxf6"
+      "d6"
     ],
     "id": 6
   },
@@ -2486,5 +2478,47 @@
       "Nf6"
     ],
     "id": 170
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "name": "A45 Indian Defense",
+    "moves": [
+      "Nf6",
+      "Bf4",
+      "d5",
+      "e3",
+      "c5"
+    ],
+    "id": 171
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "name": "A45 Indian Game: Basque Opening",
+    "moves": [
+      "Nf6",
+      "b3",
+      "c5"
+    ],
+    "id": 172
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+    "name": "D00 Blackmar-Diemer Gambit Declined: Vienna Defense",
+    "moves": [
+      "Nf6",
+      "f3",
+      "d5",
+      "e4",
+      "dxe4",
+      "Nc3",
+      "Bf5",
+      "g4",
+      "Bg6",
+      "g5",
+      "Nd5",
+      "Nxe4",
+      "Nc6"
+    ],
+    "id": 173
   }
 ]
