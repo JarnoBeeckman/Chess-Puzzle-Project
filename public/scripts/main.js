@@ -1,5 +1,9 @@
+import { fetchPositions, getFromLocalStorage, saveToLocalStorage, saveNewPuzzle, saveMiddlePuzzle } from "./storageFunc.js";
+import { shuffleArray, displayMessage, displayFilteredPositions, highlightSquare, clearHighlights } from "./helpFunc.js";
+
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 const board = Chessboard("board", {
-  draggable: true,
+  draggable: !isTouchDevice,
   position: "start",
   onDrop: handleMove,
 });
@@ -20,42 +24,13 @@ let faultList = getFromLocalStorage(storageKey);
 let faultcounter = 0;
 let isFaultOnly = 0;
 let includeMiddle = 1;
+let selectedSquare = null;
 
 
-// Fetch saved positions
-async function fetchPositions() {
-  try {
-    const response = await fetch("/positions");
-    const data = await response.json();
+async function getPositions() {
+  const data = await fetchPositions()
     savedPositions = data.openings;
     savedMiddlegames = data.middlegames
-    
-    if (savedPositions.length === 0) {
-      alert("No saved positions found.");
-    }
-  } catch (error) {
-    console.error("Error fetching positions:", error);
-    alert("Failed to fetch saved positions. Please try again.");
-  }
-}
-
-function getFromLocalStorage(key) {
-  try {
-      const jsonData = localStorage.getItem(key); // Haalt de JSON-string op
-      return jsonData ? JSON.parse(jsonData) : []; // Converteert terug naar het originele formaat
-  } catch (error) {
-      console.error("Er is een fout opgetreden bij het ophalen van local storage:", error);
-      return null;
-  }
-}
-
-function saveToLocalStorage(key, value) {
-  try {
-      const jsonData = JSON.stringify(value); // Converteert de data naar een JSON-string
-      localStorage.setItem(key, jsonData); // Slaat de JSON-string op in de local storage
-  } catch (error) {
-      console.error("Er is een fout opgetreden bij het opslaan naar local storage:", error);
-  }
 }
 
 // Filter and display positions
@@ -121,7 +96,7 @@ function filterPositions() {
     if (includeMiddle > 0) {
       filteredSavedPositions = addMiddleGames(filteredSavedPositions,true)
     }
-    else displayFilteredPositions(filteredSavedPositions, resultsContainer);
+    else displayFilteredPositions(filteredSavedPositions, resultsContainer, filteredSavedPositions.length, savedPositions.length, addnewPuzzle);
 
     filteredSavedPositions = shuffleArray(filteredSavedPositions)
     puzzleIndex = filteredSavedPositions.length;
@@ -147,72 +122,14 @@ function addMiddleGames(list,wasFiltered) {
   
       });
       if (wasFiltered)
-          displayFilteredPositions(list, resultsContainer);
+          displayFilteredPositions(list, resultsContainer, filteredSavedPositions.length, savedPositions.length, addnewPuzzle);
 
       return newPositions;
 }
 
-// Helper function to display filtered positions
-function displayFilteredPositions(positions, container) {
-  container.innerHTML = `<h4>Filtered ${filteredSavedPositions.length} Results from ${savedPositions.length} openings:</h4>`;
-
-  if (positions.length === 0) {
-    container.innerHTML += "<p>No matching puzzles found.</p>";
-    return;
-  }
-
-  const list = document.createElement("ul");
-  positions.forEach((position, index) => {
-    const listItem = document.createElement("li");
-    listItem.innerHTML = `
-      <strong>Position ${index + 1}</strong>:<br />
-      Name: ${position.name}<br />
-      Color: ${position.fen.split(' ')[1] === 'w' ? "White" : "Black"}<br />
-      Moves: ${position.moves.join(", ")} <br/>
-      ${position.middle ? position.middle.map((mid,ind)=>{return `Line ${ind+1}: ${mid.moves.join(", ")}<br/>`}):""}
-    `;
-
-    // Create button separately
-    const button = document.createElement("button");
-    button.textContent = "Add Middlegame";
-    button.classList.add("add");
-
-    // Attach event listener before appending
-    button.addEventListener("click", () => {
-      addnewPuzzle(position);
-    });
-
-    listItem.appendChild(button); // Append the button to the list item
-    list.appendChild(listItem);
-
-    
-  });
-
-  container.appendChild(list);
-}
-
-function shuffleArray(array) {
-  // Create a Uint32Array to hold random numbers
-  const randomBuffer = new Uint32Array(array.length);
-
-  // Generate secure random numbers
-  window.crypto.getRandomValues(randomBuffer);
-
-  // Fisher-Yates Shuffle Algorithm
-  for (let i = array.length - 1; i > 0; i--) {
-    // Generate a random index using the secure random value
-    const randomIndex = randomBuffer[i] % (i + 1);
-
-    // Swap the current element with the randomly chosen one
-    [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
-  }
-
-  return array;
-}
-
 // Load a puzzle
 function loadPosition(index) {
-  currentIsWhite = isWhite;
+  let currentIsWhite = isWhite;
   if (filteredSavedPositions.length === 0) {
     isFaultOnly = 0; //it also comes here after completing all fault-only puzzles
     filteredSavedPositions = shuffleArray(addMiddleGames(savedPositions))
@@ -235,12 +152,6 @@ function loadPosition(index) {
   }
 }
 
-// Function to display messages in the #message div
-function displayMessage(message, type) {
-    const messageContainer = document.getElementById("message");
-    messageContainer.innerHTML = `<span class="${type}">${message}</span>`;
-  }
-  
 // Handle move on the board
   function handleMove(source, target) {
     const move = chess.move({
@@ -329,50 +240,6 @@ function makeOpponentMove() {
   }
 }
 
-// Save to server
-async function saveNewPuzzle() {
-  const puzzleNameInput = document.getElementById("puzzleNameInput");
-  const puzzleName = puzzleNameInput.value.trim();
-  
-  if (!puzzleName) {
-    alert("Please enter a name for the puzzle.");
-    return;
-  }
-  const moves = chess.history(); // Moves made during setup
-  const puzzlemoves= moves.slice(setupMoveIndex)
-
-  try {
-     await fetch("/positions/opening", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: puzzleName, fen: startingFen, moves: puzzlemoves, id: savedPositions.length }),
-    });
-    alert("Puzzle saved")
-  } catch (error) {
-    console.error("Error saving new puzzle:", error);
-  }
-  fetchPositions();
-}
-
-// Save to server
-async function saveMiddlePuzzle(position) {
-  
-  const moves = chess.history(); // Moves made during setup
-  const puzzlemoves= moves.slice(setupMoveIndex)
-
-  try {
-     await fetch("/positions/middle", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ fen: position.fen, moves: puzzlemoves, id: savedMiddlegames.length, fk:position.id}),
-    });
-    alert("Puzzle saved")
-  } catch (error) {
-    console.error("Error saving new puzzle:", error);
-  }
-  fetchPositions();
-}
-
 // Setup making new puzzle to record, then send to saveNewPuzzle()
 function addnewPuzzle(position) {
   // Clear the chessboard and reset the chess engine
@@ -383,7 +250,7 @@ function addnewPuzzle(position) {
 
   //For adding middlegames, start from chosen opening
   if (position) {
-    isBlack = position.fen.split(' ')[1] === 'b';
+    const isBlack = position.fen.split(' ')[1] === 'b';
     chess.load(position.fen);
     position.moves.forEach(move=>{
       chess.move(move)
@@ -420,7 +287,7 @@ function addnewPuzzle(position) {
   // Add an event listener for saving the puzzle
   
   if (!position) {
-    document.getElementById("saveNewPuzzle").addEventListener("click", saveNewPuzzle);
+    document.getElementById("saveNewPuzzle").addEventListener("click", ()=>saveNewPuzzle(chess, savedPositions.length, setupMoveIndex, startingFen, getPositions));
     // Flip Board Button Handler
     document.getElementById("flipBoard").addEventListener("click", () => {
     board.flip(); // Flip the chessboard
@@ -431,7 +298,7 @@ function addnewPuzzle(position) {
     setupMoveIndex = chess.history().length; // Record the move index when the starting position is set
     });
   } else
-    document.getElementById("saveNewPuzzle").addEventListener("click", ()=>saveMiddlePuzzle(position));
+    document.getElementById("saveNewPuzzle").addEventListener("click", ()=>saveMiddlePuzzle(position, chess, savedMiddlegames.length, position.id, setupMoveIndex, getPositions));
 }
 
 function nextPuzzle() {
@@ -446,5 +313,35 @@ document.getElementById("addPuzzle").addEventListener("click", ()=>addnewPuzzle(
 document.getElementById("filterPuzzle").addEventListener("click", filterPositions);
 document.getElementById("skipPuzzle").addEventListener("click", nextPuzzle);
 
+document.querySelector('#board').addEventListener('touchstart', (event) => {
+  event.preventDefault(); // Remove mobile tap delay
+
+  const squareEl = event.target.closest('.square-55d63');
+  if (!squareEl) return;
+
+  const square = squareEl.getAttribute('data-square');
+  const piece = chess.get(square);
+
+  if (!selectedSquare) {
+    // First time selecting a piece
+    if (piece && piece.color === chess.turn()) {
+      selectedSquare = square;
+      highlightSquare(square);
+    }
+  } else {
+    if (piece && piece.color === chess.turn()) {
+      // Change selection to a different piece (same side)
+      clearHighlights();
+      selectedSquare = square;
+      highlightSquare(square);
+    } else {
+      // Attempt to move to empty square or opponent's piece
+      handleMove(selectedSquare, square);
+      clearHighlights();
+      selectedSquare = null;
+    }
+  }
+});
+
 // Initial fetch of positions
-fetchPositions();
+getPositions();
