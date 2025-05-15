@@ -74,6 +74,17 @@ function filterPositions() {
   resultsContainer.id = "resultsContainer";
   container.appendChild(resultsContainer);
 
+  // Trigger filter when pressing Enter in input fields
+  ['codeFilter', 'nameFilter'].forEach(id => {
+    const input = document.getElementById(id);
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        document.getElementById("applyFilter").click();
+      }
+    });
+  });
+
   // Add event listener for filtering
   document.getElementById("applyFilter").addEventListener("click", () => {
     const codeFilter = document.getElementById("codeFilter").value.trim().toUpperCase();
