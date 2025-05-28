@@ -1020,5 +1020,16 @@
     ],
     "id": 53,
     "fk": 25
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [
+      "O-O",
+      "Nf3",
+      "e5",
+      "d5"
+    ],
+    "id": 54,
+    "fk": 175
   }
 ]

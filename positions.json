@@ -2538,5 +2538,21 @@
       "Bb4"
     ],
     "id": 174
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "name": "E71 King's Indian Defense: Makogonov Variation",
+    "moves": [
+      "d4",
+      "Nf6",
+      "c4",
+      "g6",
+      "Nc3",
+      "Bg7",
+      "e4",
+      "d6",
+      "h3"
+    ],
+    "id": 175
   }
 ]

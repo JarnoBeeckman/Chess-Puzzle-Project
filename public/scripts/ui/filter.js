@@ -1,7 +1,7 @@
 import { displayMessage } from "./general.js";
 import { vars } from "../vars.js";
-import { shuffleArray, addMiddleGames } from "../helpers.js";
-import { nextPuzzle, addnewPuzzle } from "../puzzleLogic.js";
+import { applyFilter } from "../helpers.js";
+import { addnewPuzzle } from "../puzzleLogic.js";
 
 const resultsContainer = document.createElement("div");
 // Filter and display positions
@@ -57,33 +57,7 @@ export function filterPositions() {
   });
 
   // Add event listener for filtering
-  document.getElementById("applyFilter").addEventListener("click", () => {
-    const codeFilter = document.getElementById("codeFilter").value.trim().toUpperCase();
-    const nameFilter = document.getElementById("nameFilter").value.trim().toLowerCase();
-    const colorFilter = document.getElementById("colorFilter").value;
-    vars.isFaultOnly = document.getElementById("faultFilter").value;
-    vars.includeMiddle = document.getElementById("middle").value;
-
-    // Filter saved positions based on the inputs
-    vars.filteredSavedPositions = vars.savedPositions.filter(position => {
-      const codeMatches = codeFilter ? position.name.toUpperCase().startsWith(codeFilter) : true;
-      const nameMatches = nameFilter ? position.name.toLowerCase().includes(nameFilter) : true;
-      const colorMatches = colorFilter ? position.fen.split(' ')[1] === colorFilter : true;
-      const faultMatches = vars.isFaultOnly > 0 ? vars.faultList[position.id] > 0 : true;
-      return codeMatches && nameMatches && colorMatches && faultMatches;
-    });
-
-    // Display filtered results
-
-    if (vars.includeMiddle > 0) {
-      vars.filteredSavedPositions = addMiddleGames(vars.filteredSavedPositions, true)
-    }
-    else displayFilteredPositions(vars.filteredSavedPositions, vars.filteredSavedPositions.length, vars.savedPositions.length, vars.addnewPuzzle);
-
-    vars.filteredSavedPositions = shuffleArray(vars.filteredSavedPositions)
-    vars.puzzleIndex = vars.filteredSavedPositions.length;
-    nextPuzzle()
-  });
+  document.getElementById("applyFilter").addEventListener("click", applyFilter );
 }
 
 

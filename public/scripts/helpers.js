@@ -1,5 +1,6 @@
 import { vars } from "./vars.js";
 import { displayFilteredPositions } from "./ui/filter.js";
+import { nextPuzzle } from "./puzzleLogic.js";
 
 export function shuffleArray(array) {
   // Create a Uint32Array to hold random numbers
@@ -41,4 +42,32 @@ export function addMiddleGames(list, wasFiltered) {
     displayFilteredPositions(list);
 
   return newPositions;
+}
+
+export function applyFilter() {
+  const codeFilter = document.getElementById("codeFilter").value.trim().toUpperCase();
+  const nameFilter = document.getElementById("nameFilter").value.trim().toLowerCase();
+  const colorFilter = document.getElementById("colorFilter").value;
+  vars.isFaultOnly = document.getElementById("faultFilter").value;
+  vars.includeMiddle = document.getElementById("middle").value;
+
+  // Filter saved positions based on the inputs
+  vars.filteredSavedPositions = vars.savedPositions.filter(position => {
+    const codeMatches = codeFilter ? position.name.toUpperCase().startsWith(codeFilter) : true;
+    const nameMatches = nameFilter ? position.name.toLowerCase().includes(nameFilter) : true;
+    const colorMatches = colorFilter ? position.fen.split(' ')[1] === colorFilter : true;
+    const faultMatches = vars.isFaultOnly > 0 ? vars.faultList[position.id] > 0 : true;
+    return codeMatches && nameMatches && colorMatches && faultMatches;
+  });
+
+  // Display filtered results
+
+  if (vars.includeMiddle > 0) {
+    vars.filteredSavedPositions = addMiddleGames(vars.filteredSavedPositions, true)
+  }
+  else displayFilteredPositions(vars.filteredSavedPositions, vars.filteredSavedPositions.length, vars.savedPositions.length, vars.addnewPuzzle);
+
+  vars.filteredSavedPositions = shuffleArray(vars.filteredSavedPositions)
+  vars.puzzleIndex = vars.filteredSavedPositions.length;
+  nextPuzzle()
 }
