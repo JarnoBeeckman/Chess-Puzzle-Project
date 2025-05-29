@@ -1,6 +1,6 @@
 import { displayMessage } from "./general.js";
 import { vars } from "../vars.js";
-import { applyFilter } from "../helpers.js";
+import { applyFilter, splitMoves } from "../helpers.js";
 import { addnewPuzzle } from "../puzzleLogic.js";
 
 const resultsContainer = document.createElement("div");
@@ -70,27 +70,35 @@ export function displayFilteredPositions(positions) {
   }
 
   const list = document.createElement("ul");
+
   positions.forEach((position, index) => {
     const listItem = document.createElement("li");
-    listItem.innerHTML = `
-          <strong>Position ${index + 1}</strong>:<br />
-          Name: ${position.name}<br />
-          Color: ${position.fen.split(' ')[1] === 'w' ? "White" : "Black"}<br />
-          Moves: ${position.moves.join(", ")} <br/>
-          ${position.middle ? position.middle.map((mid, ind) => { return `Line ${ind + 1}: ${mid.moves.join(", ")}<br/>` }) : ""}
-        `;
 
-    // Create button separately
+    // Format middlegame lines
+    const middleContent = position.middle
+      ? position.middle.map((mid, ind) => {
+        return `${ind === 0 ? '<br/>' : ''}Line ${ind + 1}:<br/>${splitMoves(mid.moves).join("<br/>")}`;
+      }).join("<br/>")
+      : "";
+
+    listItem.innerHTML = `
+      <strong>Position ${index + 1}</strong>:<br />
+      Name: ${position.name}<br />
+      Color: ${position.fen.split(' ')[1] === 'w' ? "White" : "Black"}<br />
+      Moves: ${position.moves.join(", ")} 
+      ${middleContent}
+      <br/>
+    `;
+
+    // Create and style the button
     const button = document.createElement("button");
     button.textContent = "Add Middlegame";
     button.classList.add("add");
-
-    // Attach event listener before appending
     button.addEventListener("click", () => {
       addnewPuzzle(position);
     });
 
-    listItem.appendChild(button); // Append the button to the list item
+    listItem.appendChild(button);
     list.appendChild(listItem);
   });
 

@@ -68,11 +68,11 @@ app.get("/positions", (req, res) => {
 
 // Endpoint to save a new position
 app.post("/positions/opening", (req, res) => {
-  const { fen, name, moves, id } = req.body;
+  const { fen, name, moves, id, archived } = req.body;
   if (fen && moves && name && id) {
     const savedPositions = getSavedPositions();  // Get the current saved positions
-    savedPositions.openings.push({ fen, name, moves, id });  // Add the new position
-    savePositions(savedPositions.openings);  // Save the updated list back to positions.json
+    savedPositions.push({ fen, name, moves, id, archived });  // Add the new position
+    savePositions(savedPositions);  // Save the updated list back to positions.json
     res.json({ message: "Position saved successfully!" });
   } else {
     res.status(400).json({ message: "Invalid data provided." });
@@ -83,9 +83,9 @@ app.post("/positions/opening", (req, res) => {
 app.post("/positions/middle", (req, res) => {
   const { fen, moves, id, fk } = req.body;
   if (fen && moves && id >= 0 && fk >= 0) {
-    const savedPositions = getSavedPositions();  // Get the current saved positions
-    savedPositions.middlegames.push({ fen, moves, id, fk });  // Add the new position
-    saveMiddlegames(savedPositions.middlegames);  // Save the updated list back to middlegames.json
+    const savedPositions = getSavedMiddles();  // Get the current saved positions
+    savedPositions.push({ fen, moves, id, fk });  // Add the new position
+    saveMiddlegames(savedPositions);  // Save the updated list back to middlegames.json
     res.json({ message: "Middlegame saved successfully!" });
   } else {
     res.status(400).json({ message: "Invalid data provided." });

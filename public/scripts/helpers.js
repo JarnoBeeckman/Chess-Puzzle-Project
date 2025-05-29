@@ -73,3 +73,10 @@ export function applyFilter() {
   vars.puzzleIndex = vars.filteredSavedPositions.length;
   nextPuzzle();
 }
+export function splitMoves(moves, chunkSize = 10) {
+  const lines = [];
+  for (let i = 0; i < moves.length; i += chunkSize) {
+    lines.push(moves.slice(i, i + chunkSize).join(", "));
+  }
+  return lines;
+}
