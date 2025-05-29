@@ -24,9 +24,9 @@ function getSavedPositions() {
 }
 
 const savedPositions = getSavedPositions();
-savedPositions.forEach((pos,index)=>{
-    if (!pos.id)
-        pos.id = index;
+savedPositions.forEach((pos) => {
+  if (!pos.archived)
+    pos.archived = false;
 })
 
 savePositions(savedPositions)

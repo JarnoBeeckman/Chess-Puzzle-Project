@@ -1,5 +1,5 @@
 import { vars } from "../vars.js";
-import { saveNewPuzzle, saveMiddlePuzzle, } from "../storage.js"
+import { saveNewPuzzle, saveMiddlePuzzle, toggleArchived } from "../storage.js"
 import { filterPositions } from "./filter.js";
 import { nextPuzzle, handleMove, addnewPuzzle } from "../puzzleLogic.js"
 
@@ -43,7 +43,7 @@ export function displayNewPuzzleForm(position) {
     document.getElementById("saveNewPuzzle").addEventListener("click", () => saveNewPuzzle());
     // Flip Board Button Handler
     document.getElementById("flipBoard").addEventListener("click", () => {
-      
+
       vars.board.flip(); // Flip the chessboard
       vars.isWhite = !vars.isWhite; // Toggle isWhite flag
     });
@@ -55,11 +55,36 @@ export function displayNewPuzzleForm(position) {
     document.getElementById("saveNewPuzzle").addEventListener("click", () => saveMiddlePuzzle(position));
 }
 
+export function showArchiveControls() {
+  const container = document.getElementById("message");
+  container.innerHTML = "";
+
+  const current = vars.filteredSavedPositions[vars.puzzleIndex];
+  const isArchived = current.archived === true;
+
+  const archiveBtn = document.createElement("button");
+  archiveBtn.textContent = isArchived ? "Unarchive" : "Archive";
+  archiveBtn.className = "btn archive-btn";
+  archiveBtn.onclick = () => {
+    toggleArchived()
+  };
+  container.appendChild(archiveBtn);
+
+  const continueBtn = document.createElement("button");
+  continueBtn.textContent = "Continue";
+  continueBtn.className = "btn continue-btn";
+  continueBtn.onclick = () => {
+    container.innerHTML = "";
+    nextPuzzle();
+  };
+  container.appendChild(continueBtn);
+}
+
 // Set up event listeners
 document.getElementById("addPuzzle").addEventListener("click", addnewPuzzle);
 document.getElementById("filterPuzzle").addEventListener("click", filterPositions);
 document.getElementById("skipPuzzle").addEventListener("click", nextPuzzle);
-
+// Mobile clicking
 document.querySelector('#board').addEventListener('touchstart', (event) => {
   event.preventDefault(); // Remove mobile tap delay
 
@@ -88,4 +113,27 @@ document.querySelector('#board').addEventListener('touchstart', (event) => {
       vars.selectedSquare = null;
     }
   }
+});
+
+// Settings modal logic
+const settingsBtn = document.getElementById("settingsBtn");
+const settingsModal = document.getElementById("settingsModal");
+const settingsClose = settingsModal.querySelector(".close");
+const archiveToggle = document.getElementById("bulkArchiveToggle");
+
+// Open settings
+settingsBtn.addEventListener("click", () => {
+  settingsModal.style.display = "block";
+  archiveToggle.checked = vars.bulkArchiveMode; // show current state
+});
+
+// Close settings (X button or outside click)
+settingsClose.addEventListener("click", () => settingsModal.style.display = "none");
+window.addEventListener("click", e => {
+  if (e.target === settingsModal) settingsModal.style.display = "none";
+});
+
+// Toggle bulk archive mode
+archiveToggle.addEventListener("change", e => {
+  vars.bulkArchiveMode = e.target.checked;
 });

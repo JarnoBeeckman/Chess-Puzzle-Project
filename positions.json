@@ -13,7 +13,8 @@
       "Bb4",
       "Bg5"
     ],
-    "id": 0
+    "id": 0,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -27,7 +28,8 @@
       "Nxd5",
       "Nf3"
     ],
-    "id": 1
+    "id": 1,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -45,7 +47,8 @@
       "Be7",
       "e3"
     ],
-    "id": 2
+    "id": 2,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -59,7 +62,8 @@
       "d5",
       "Nc3"
     ],
-    "id": 3
+    "id": 3,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -73,7 +77,8 @@
       "Qxd5",
       "Nc3"
     ],
-    "id": 4
+    "id": 4,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -89,7 +94,8 @@
       "c5",
       "cxd5"
     ],
-    "id": 5
+    "id": 5,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -107,7 +113,8 @@
       "Ndb5",
       "d6"
     ],
-    "id": 6
+    "id": 6,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -125,7 +132,8 @@
       "Nf3",
       "Bb4"
     ],
-    "id": 7
+    "id": 7,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -143,7 +151,8 @@
       "Nxc6",
       "bxc6"
     ],
-    "id": 8
+    "id": 8,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -155,7 +164,8 @@
       "Bc4",
       "e6"
     ],
-    "id": 9
+    "id": 9,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -169,7 +179,8 @@
       "Bxe4",
       "g6"
     ],
-    "id": 10
+    "id": 10,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -185,7 +196,8 @@
       "Nf3",
       "Nf6"
     ],
-    "id": 11
+    "id": 11,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -197,7 +209,8 @@
       "Nf3",
       "Nc6"
     ],
-    "id": 12
+    "id": 12,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -209,7 +222,8 @@
       "c3",
       "Nf6"
     ],
-    "id": 13
+    "id": 13,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -221,7 +235,8 @@
       "Bc4",
       "Nf6"
     ],
-    "id": 14
+    "id": 14,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -233,7 +248,8 @@
       "Qxd4",
       "Nc6"
     ],
-    "id": 15
+    "id": 15,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -245,7 +261,8 @@
       "Bb5",
       "e6"
     ],
-    "id": 16
+    "id": 16,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
@@ -259,7 +276,8 @@
       "e3",
       "c5"
     ],
-    "id": 17
+    "id": 17,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -271,7 +289,8 @@
       "c5",
       "d5"
     ],
-    "id": 18
+    "id": 18,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
@@ -285,7 +304,8 @@
       "e3",
       "h6"
     ],
-    "id": 19
+    "id": 19,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -303,7 +323,8 @@
       "Be7",
       "e3"
     ],
-    "id": 20
+    "id": 20,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/1P6/P1PPPPPP/RNBQKBNR b KQkq - 0 1",
@@ -313,7 +334,8 @@
       "Bb2",
       "Nc6"
     ],
-    "id": 21
+    "id": 21,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -329,7 +351,8 @@
       "Nxe5",
       "f4"
     ],
-    "id": 22
+    "id": 22,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -343,7 +366,8 @@
       "Nf6",
       "e5"
     ],
-    "id": 23
+    "id": 23,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -355,7 +379,8 @@
       "g6",
       "cxd5"
     ],
-    "id": 24
+    "id": 24,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -371,7 +396,8 @@
       "Bf5",
       "cxd5"
     ],
-    "id": 25
+    "id": 25,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -387,7 +413,8 @@
       "d5",
       "e3"
     ],
-    "id": 26
+    "id": 26,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -403,7 +430,8 @@
       "b5",
       "a4"
     ],
-    "id": 27
+    "id": 27,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -417,7 +445,8 @@
       "c6",
       "e4"
     ],
-    "id": 28
+    "id": 28,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
@@ -433,7 +462,8 @@
       "e3",
       "c5"
     ],
-    "id": 29
+    "id": 29,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -447,7 +477,8 @@
       "Bg7",
       "e4"
     ],
-    "id": 30
+    "id": 30,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -463,7 +494,8 @@
       "Bb4",
       "Bxc4"
     ],
-    "id": 31
+    "id": 31,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -473,7 +505,8 @@
       "f5",
       "Bg5"
     ],
-    "id": 32
+    "id": 32,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -491,7 +524,8 @@
       "d6",
       "e4"
     ],
-    "id": 33
+    "id": 33,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -507,7 +541,8 @@
       "a6",
       "e3"
     ],
-    "id": 34
+    "id": 34,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -519,7 +554,8 @@
       "Nc6",
       "Nf3"
     ],
-    "id": 35
+    "id": 35,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -535,7 +571,8 @@
       "Nf6",
       "Nxf6+"
     ],
-    "id": 36
+    "id": 36,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -547,7 +584,8 @@
       "e5",
       "dxe5"
     ],
-    "id": 37
+    "id": 37,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -559,7 +597,8 @@
       "Bf5",
       "cxd5"
     ],
-    "id": 38
+    "id": 38,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -573,7 +612,8 @@
       "Qxd5",
       "Nf3"
     ],
-    "id": 39
+    "id": 39,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -587,7 +627,8 @@
       "Nf6",
       "e4"
     ],
-    "id": 40
+    "id": 40,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -605,7 +646,8 @@
       "O-O",
       "e3"
     ],
-    "id": 41
+    "id": 41,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -623,7 +665,8 @@
       "dxc4",
       "e4"
     ],
-    "id": 42
+    "id": 42,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -639,7 +682,8 @@
       "Nbd7",
       "cxd5"
     ],
-    "id": 43
+    "id": 43,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -655,7 +699,8 @@
       "Bg7",
       "cxd5"
     ],
-    "id": 44
+    "id": 44,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -671,7 +716,8 @@
       "c6",
       "h3"
     ],
-    "id": 45
+    "id": 45,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -689,7 +735,8 @@
       "Bd6",
       "Nf3"
     ],
-    "id": 46
+    "id": 46,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -703,7 +750,8 @@
       "d6",
       "Nc3"
     ],
-    "id": 47
+    "id": 47,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -717,7 +765,8 @@
       "e5",
       "Nc3"
     ],
-    "id": 48
+    "id": 48,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -731,7 +780,8 @@
       "Ne4",
       "Qc2"
     ],
-    "id": 49
+    "id": 49,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -747,7 +797,8 @@
       "d6",
       "Be2"
     ],
-    "id": 50
+    "id": 50,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -763,7 +814,8 @@
       "d6",
       "Qc2"
     ],
-    "id": 51
+    "id": 51,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -779,7 +831,8 @@
       "b6",
       "Nf3"
     ],
-    "id": 52
+    "id": 52,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -793,7 +846,8 @@
       "c6",
       "dxc6"
     ],
-    "id": 53
+    "id": 53,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -809,7 +863,8 @@
       "Bg7",
       "Be2"
     ],
-    "id": 54
+    "id": 54,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -823,7 +878,8 @@
       "c6",
       "e4"
     ],
-    "id": 55
+    "id": 55,
+    "archived": true
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -837,7 +893,8 @@
       "e5",
       "Nf3"
     ],
-    "id": 56
+    "id": 56,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -851,7 +908,8 @@
       "Bf5",
       "Nf3"
     ],
-    "id": 57
+    "id": 57,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -871,7 +929,8 @@
       "Nbd7",
       "Nxc4"
     ],
-    "id": 58
+    "id": 58,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -891,7 +950,8 @@
       "e6",
       "f3"
     ],
-    "id": 59
+    "id": 59,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -909,7 +969,8 @@
       "Bg4",
       "Ne5"
     ],
-    "id": 60
+    "id": 60,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -927,7 +988,8 @@
       "e6",
       "e3"
     ],
-    "id": 61
+    "id": 61,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -943,7 +1005,8 @@
       "a6",
       "g3"
     ],
-    "id": 62
+    "id": 62,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -957,7 +1020,8 @@
       "b5",
       "cxb5"
     ],
-    "id": 63
+    "id": 63,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -969,7 +1033,8 @@
       "Nc6",
       "d5"
     ],
-    "id": 64
+    "id": 64,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -981,7 +1046,8 @@
       "b6",
       "f3"
     ],
-    "id": 65
+    "id": 65,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -997,7 +1063,8 @@
       "Nd7",
       "Nf3"
     ],
-    "id": 66
+    "id": 66,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1017,7 +1084,8 @@
       "Ne7",
       "h4"
     ],
-    "id": 67
+    "id": 67,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1039,7 +1107,8 @@
       "f5",
       "Qg3"
     ],
-    "id": 68
+    "id": 68,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1061,7 +1130,8 @@
       "Ne7",
       "Qxg7"
     ],
-    "id": 69
+    "id": 69,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1081,7 +1151,8 @@
       "Qa5",
       "Bd2"
     ],
-    "id": 70
+    "id": 70,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1101,7 +1172,8 @@
       "dxc3",
       "Qg4"
     ],
-    "id": 71
+    "id": 71,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1121,7 +1193,8 @@
       "cxb4",
       "Nb5"
     ],
-    "id": 72
+    "id": 72,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1141,7 +1214,8 @@
       "cxd4",
       "Nb5"
     ],
-    "id": 73
+    "id": 73,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1155,7 +1229,8 @@
       "c5",
       "exd5"
     ],
-    "id": 74
+    "id": 74,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1169,7 +1244,8 @@
       "Qe7",
       "Bg5"
     ],
-    "id": 75
+    "id": 75,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1183,7 +1259,8 @@
       "d6",
       "Bg5"
     ],
-    "id": 76
+    "id": 76,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1197,7 +1274,8 @@
       "Bc5",
       "Nc3"
     ],
-    "id": 77
+    "id": 77,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1211,7 +1289,8 @@
       "f6",
       "e4"
     ],
-    "id": 78
+    "id": 78,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1225,7 +1304,8 @@
       "Nge7",
       "Nc3"
     ],
-    "id": 79
+    "id": 79,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1237,7 +1317,8 @@
       "d6",
       "Nf3"
     ],
-    "id": 80
+    "id": 80,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1249,7 +1330,8 @@
       "Bc5",
       "Nc3"
     ],
-    "id": 81
+    "id": 81,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1263,7 +1345,8 @@
       "fxe5",
       "Qh5+"
     ],
-    "id": 82
+    "id": 82,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1277,7 +1360,8 @@
       "Nc6",
       "Nf3"
     ],
-    "id": 83
+    "id": 83,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1289,7 +1373,8 @@
       "Qh4",
       "Nf3"
     ],
-    "id": 84
+    "id": 84,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1307,7 +1392,8 @@
       "O-O",
       "Bd3"
     ],
-    "id": 85
+    "id": 85,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1325,7 +1411,8 @@
       "c5",
       "dxc5"
     ],
-    "id": 86
+    "id": 86,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1339,7 +1426,8 @@
       "e6",
       "h4"
     ],
-    "id": 87
+    "id": 87,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1353,7 +1441,8 @@
       "c5",
       "Be3"
     ],
-    "id": 88
+    "id": 88,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1369,7 +1458,8 @@
       "Bb7",
       "h4"
     ],
-    "id": 89
+    "id": 89,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1383,7 +1473,8 @@
       "d5",
       "exd5"
     ],
-    "id": 90
+    "id": 90,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1397,7 +1488,8 @@
       "Nf6",
       "Be3"
     ],
-    "id": 91
+    "id": 91,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1411,7 +1503,8 @@
       "c6",
       "a3"
     ],
-    "id": 92
+    "id": 92,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1423,7 +1516,8 @@
       "Nf6",
       "e5"
     ],
-    "id": 93
+    "id": 93,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1435,7 +1529,8 @@
       "e6",
       "h4"
     ],
-    "id": 94
+    "id": 94,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1449,7 +1544,8 @@
       "Qxd5",
       "Nf3"
     ],
-    "id": 95
+    "id": 95,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1463,7 +1559,8 @@
       "Bg7",
       "Bb5+"
     ],
-    "id": 96
+    "id": 96,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1477,7 +1574,8 @@
       "Nf6",
       "c4"
     ],
-    "id": 97
+    "id": 97,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1491,7 +1589,8 @@
       "Bg7",
       "f4"
     ],
-    "id": 98
+    "id": 98,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1505,7 +1604,8 @@
       "d5",
       "e5"
     ],
-    "id": 99
+    "id": 99,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1519,7 +1619,8 @@
       "gxf5",
       "Qh5#"
     ],
-    "id": 100
+    "id": 100,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1531,7 +1632,8 @@
       "d6",
       "e4"
     ],
-    "id": 101
+    "id": 101,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1545,7 +1647,8 @@
       "exd5",
       "cxd5"
     ],
-    "id": 102
+    "id": 102,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1559,7 +1662,8 @@
       "d6",
       "e4"
     ],
-    "id": 103
+    "id": 103,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1573,7 +1677,8 @@
       "Nf6",
       "Nc3"
     ],
-    "id": 104
+    "id": 104,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1587,7 +1692,8 @@
       "d6",
       "e4"
     ],
-    "id": 105
+    "id": 105,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1601,7 +1707,8 @@
       "Qa5",
       "Bd2"
     ],
-    "id": 106
+    "id": 106,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1615,7 +1722,8 @@
       "d6",
       "a4"
     ],
-    "id": 107
+    "id": 107,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1629,7 +1737,8 @@
       "fxe4",
       "Nh3"
     ],
-    "id": 108
+    "id": 108,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1643,7 +1752,8 @@
       "g6",
       "Nc3"
     ],
-    "id": 109
+    "id": 109,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1657,7 +1767,8 @@
       "Nbd7",
       "Nc3"
     ],
-    "id": 110
+    "id": 110,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1671,7 +1782,8 @@
       "c6",
       "Nc3"
     ],
-    "id": 111
+    "id": 111,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1685,7 +1797,8 @@
       "Bg4",
       "Nc3"
     ],
-    "id": 112
+    "id": 112,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1701,7 +1814,8 @@
       "Nf6",
       "Bg5"
     ],
-    "id": 113
+    "id": 113,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1717,7 +1831,8 @@
       "c6",
       "h3"
     ],
-    "id": 114
+    "id": 114,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1731,7 +1846,8 @@
       "Nc6",
       "Bg5"
     ],
-    "id": 115
+    "id": 115,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1743,7 +1859,8 @@
       "Bg4",
       "e4"
     ],
-    "id": 116
+    "id": 116,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1755,7 +1872,8 @@
       "Nf6",
       "e5"
     ],
-    "id": 117
+    "id": 117,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1769,7 +1887,8 @@
       "Bf5",
       "Nf3"
     ],
-    "id": 118
+    "id": 118,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1783,7 +1902,8 @@
       "c5",
       "Nf3"
     ],
-    "id": 119
+    "id": 119,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1795,7 +1915,8 @@
       "Bb7",
       "Bd3"
     ],
-    "id": 120
+    "id": 120,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1807,7 +1928,8 @@
       "Ba6",
       "Bxa6"
     ],
-    "id": 121
+    "id": 121,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1821,7 +1943,8 @@
       "exf6",
       "e3"
     ],
-    "id": 122
+    "id": 122,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1835,7 +1958,8 @@
       "g5",
       "e3"
     ],
-    "id": 123
+    "id": 123,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1847,7 +1971,8 @@
       "Nb8",
       "e4"
     ],
-    "id": 124
+    "id": 124,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1859,7 +1984,8 @@
       "Ne5",
       "Nc3"
     ],
-    "id": 125
+    "id": 125,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1871,7 +1997,8 @@
       "Nb4",
       "e4"
     ],
-    "id": 126
+    "id": 126,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1883,7 +2010,8 @@
       "b5",
       "a4"
     ],
-    "id": 127
+    "id": 127,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1895,7 +2023,8 @@
       "e6",
       "Nf3"
     ],
-    "id": 128
+    "id": 128,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1909,7 +2038,8 @@
       "c5",
       "d5"
     ],
-    "id": 129
+    "id": 129,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -1923,7 +2053,8 @@
       "Ne5",
       "f4"
     ],
-    "id": 130
+    "id": 130,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -1935,7 +2066,8 @@
       "Nc3",
       "e5"
     ],
-    "id": 131
+    "id": 131,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -1947,7 +2079,8 @@
       "b4",
       "Nxb4"
     ],
-    "id": 132
+    "id": 132,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -1963,7 +2096,8 @@
       "d3",
       "d6"
     ],
-    "id": 133
+    "id": 133,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -1975,7 +2109,8 @@
       "f4",
       "g6"
     ],
-    "id": 134
+    "id": 134,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -1989,7 +2124,8 @@
       "Bg2",
       "d6"
     ],
-    "id": 135
+    "id": 135,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2001,7 +2137,8 @@
       "Bc4",
       "a6"
     ],
-    "id": 136
+    "id": 136,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2013,7 +2150,8 @@
       "Bb5",
       "Nd4"
     ],
-    "id": 137
+    "id": 137,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2025,7 +2163,8 @@
       "d3",
       "Nf6"
     ],
-    "id": 138
+    "id": 138,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2037,7 +2176,8 @@
       "Nge2",
       "Nd4"
     ],
-    "id": 139
+    "id": 139,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2047,7 +2187,8 @@
       "Bc4",
       "e6"
     ],
-    "id": 140
+    "id": 140,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2061,7 +2202,8 @@
       "Nxc3",
       "Nc6"
     ],
-    "id": 141
+    "id": 141,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2077,7 +2219,8 @@
       "Bxb2",
       "e6"
     ],
-    "id": 142
+    "id": 142,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2093,7 +2236,8 @@
       "Bxb2",
       "e6"
     ],
-    "id": 143
+    "id": 143,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2111,7 +2255,8 @@
       "Nxd4",
       "Nf6"
     ],
-    "id": 144
+    "id": 144,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2123,7 +2268,8 @@
       "Bc4",
       "Nc6"
     ],
-    "id": 145
+    "id": 145,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2135,7 +2281,8 @@
       "f4",
       "Nc6"
     ],
-    "id": 146
+    "id": 146,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2147,7 +2294,8 @@
       "Nc3",
       "g6"
     ],
-    "id": 147
+    "id": 147,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2159,7 +2307,8 @@
       "a3",
       "e5"
     ],
-    "id": 148
+    "id": 148,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2171,7 +2320,8 @@
       "d4",
       "d5"
     ],
-    "id": 149
+    "id": 149,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2183,7 +2333,8 @@
       "Bb2",
       "e6"
     ],
-    "id": 150
+    "id": 150,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2195,7 +2346,8 @@
       "c4",
       "e5"
     ],
-    "id": 151
+    "id": 151,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2205,7 +2357,8 @@
       "a3",
       "g6"
     ],
-    "id": 152
+    "id": 152,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2219,7 +2372,8 @@
       "Nxd4",
       "Nf6"
     ],
-    "id": 153
+    "id": 153,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2233,7 +2387,8 @@
       "Qxe5",
       "Nf3"
     ],
-    "id": 154
+    "id": 154,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2245,7 +2400,8 @@
       "Nf3",
       "Bg7"
     ],
-    "id": 155
+    "id": 155,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2263,7 +2419,8 @@
       "c6",
       "e3"
     ],
-    "id": 156
+    "id": 156,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2277,7 +2434,8 @@
       "Bb4",
       "e3"
     ],
-    "id": 157
+    "id": 157,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2295,7 +2453,8 @@
       "exd5",
       "e4"
     ],
-    "id": 158
+    "id": 158,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2311,7 +2470,8 @@
       "exd5",
       "Nf3"
     ],
-    "id": 159
+    "id": 159,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2329,7 +2489,8 @@
       "Bd7",
       "Qxd4"
     ],
-    "id": 160
+    "id": 160,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/1P6/8/P1PPPPPP/RNBQKBNR b KQkq b3 0 1",
@@ -2341,7 +2502,8 @@
       "Bxe5",
       "Nf6"
     ],
-    "id": 161
+    "id": 161,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2355,7 +2517,8 @@
       "Ng5",
       "Nf6"
     ],
-    "id": 162
+    "id": 162,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2371,7 +2534,8 @@
       "d6",
       "f4"
     ],
-    "id": 163
+    "id": 163,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2387,7 +2551,8 @@
       "Bh5",
       "Nc3"
     ],
-    "id": 164
+    "id": 164,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2405,7 +2570,8 @@
       "Nd7",
       "Qxb7"
     ],
-    "id": 165
+    "id": 165,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
@@ -2419,7 +2585,8 @@
       "Nf3",
       "d5"
     ],
-    "id": 166
+    "id": 166,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
@@ -2435,7 +2602,8 @@
       "bxc3",
       "b6"
     ],
-    "id": 167
+    "id": 167,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2451,7 +2619,8 @@
       "exd4",
       "Bxc4"
     ],
-    "id": 168
+    "id": 168,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2465,7 +2634,8 @@
       "b5",
       "a4"
     ],
-    "id": 169
+    "id": 169,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2477,7 +2647,8 @@
       "Bb2",
       "Nf6"
     ],
-    "id": 170
+    "id": 170,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
@@ -2489,7 +2660,8 @@
       "e3",
       "c5"
     ],
-    "id": 171
+    "id": 171,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
@@ -2499,7 +2671,8 @@
       "b3",
       "c5"
     ],
-    "id": 172
+    "id": 172,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
@@ -2519,7 +2692,8 @@
       "Nxe4",
       "Nc6"
     ],
-    "id": 173
+    "id": 173,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
@@ -2537,7 +2711,8 @@
       "Nf3",
       "Bb4"
     ],
-    "id": 174
+    "id": 174,
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
@@ -2553,6 +2728,7 @@
       "d6",
       "h3"
     ],
-    "id": 175
+    "id": 175,
+    "archived": false
   }
 ]

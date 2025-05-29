@@ -6,8 +6,7 @@ import { addnewPuzzle } from "../puzzleLogic.js";
 const resultsContainer = document.createElement("div");
 // Filter and display positions
 export function filterPositions() {
-
-  const container = displayMessage("<h3>Filter Puzzles:</h3>", "")
+  const container = displayMessage("<h3>Filter Puzzles:</h3>", "");
 
   // Create filter inputs
   const filterContainer = document.createElement("div");
@@ -25,27 +24,29 @@ export function filterPositions() {
       <option value="b">Black</option>
     </select><br/>
 
-    <label for="faultFilter">Faults-made only:</label>
-    <select id="faultFilter">
-      <option value="0">No</option>
-      <option value="1">Yes</option>
-    </select><br/>
+     <label>
+      <input type="checkbox" id="middle" checked/>
+      Include Middlegames
+      </label>
+    <br/>
 
-    <label for="middle">Middlegames included:</label>
-    <select id="middle">
-      <option value="1">Yes</option>
-      <option value="0">No</option>
-    </select><br/>
+    <label>
+    <input type="checkbox" id="faultFilter"/>
+    Faults-made only
+    </label><br/>
+
+    <label>
+      <input type="checkbox" id="includeArchived" />
+      Include Archived
+    </label><br/>
 
     <button id="applyFilter">Apply Filter</button>
   `;
   container.appendChild(filterContainer);
 
-
   resultsContainer.id = "resultsContainer";
   container.appendChild(resultsContainer);
 
-  // Trigger filter when pressing Enter in input fields
   ['codeFilter', 'nameFilter'].forEach(id => {
     const input = document.getElementById(id);
     input.addEventListener('keydown', (event) => {
@@ -56,10 +57,8 @@ export function filterPositions() {
     });
   });
 
-  // Add event listener for filtering
-  document.getElementById("applyFilter").addEventListener("click", applyFilter );
+  document.getElementById("applyFilter").addEventListener("click", applyFilter);
 }
-
 
 // Helper function to display filtered positions
 export function displayFilteredPositions(positions) {

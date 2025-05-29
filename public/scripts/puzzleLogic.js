@@ -1,4 +1,4 @@
-import { displayNewPuzzleForm, displayMessage } from "./ui/general.js";
+import { displayNewPuzzleForm, displayMessage, showArchiveControls } from "./ui/general.js";
 import { vars } from "./vars.js";
 import { shuffleArray, addMiddleGames } from "./helpers.js"
 import { saveToLocalStorage } from "./storage.js"
@@ -12,6 +12,7 @@ export function loadPosition(index) {
   }
 
   const position = vars.filteredSavedPositions[index];
+  vars.currentId = position.id
   vars.isWhite = position.fen.split(' ')[1] === 'w'; // Determine if you're playing as white or black
   vars.chess.load(position.fen);
   vars.board.position(position.fen);
@@ -92,7 +93,9 @@ export function handleMove(source, target) {
 
       else displayMessage(`Completed ${vars.faultcounter > 0 ? 'with faults' : ''}`, "success");
 
-      setTimeout(nextPuzzle, 100);
+      if (vars.bulkArchiveMode)
+        showArchiveControls();
+      else setTimeout(nextPuzzle, 100);
     } else {
       setTimeout(makeOpponentMove, 100);
     }

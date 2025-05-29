@@ -48,26 +48,28 @@ export function applyFilter() {
   const codeFilter = document.getElementById("codeFilter").value.trim().toUpperCase();
   const nameFilter = document.getElementById("nameFilter").value.trim().toLowerCase();
   const colorFilter = document.getElementById("colorFilter").value;
-  vars.isFaultOnly = document.getElementById("faultFilter").value;
-  vars.includeMiddle = document.getElementById("middle").value;
+  const includeArchived = document.getElementById("includeArchived").checked;
 
-  // Filter saved positions based on the inputs
+  vars.isFaultOnly = document.getElementById("faultFilter").checked;
+  vars.includeMiddle = document.getElementById("middle").checked;
+
   vars.filteredSavedPositions = vars.savedPositions.filter(position => {
     const codeMatches = codeFilter ? position.name.toUpperCase().startsWith(codeFilter) : true;
     const nameMatches = nameFilter ? position.name.toLowerCase().includes(nameFilter) : true;
     const colorMatches = colorFilter ? position.fen.split(' ')[1] === colorFilter : true;
-    const faultMatches = vars.isFaultOnly > 0 ? vars.faultList[position.id] > 0 : true;
-    return codeMatches && nameMatches && colorMatches && faultMatches;
+    const faultMatches = vars.isFaultOnly ? vars.faultList[position.id] > 0 : true;
+    const archivedMatches = includeArchived ? true : !position.archived;
+
+    return codeMatches && nameMatches && colorMatches && faultMatches && archivedMatches;
   });
 
-  // Display filtered results
-
-  if (vars.includeMiddle > 0) {
-    vars.filteredSavedPositions = addMiddleGames(vars.filteredSavedPositions, true)
+  if (vars.includeMiddle) {
+    vars.filteredSavedPositions = addMiddleGames(vars.filteredSavedPositions, true);
+  } else {
+    displayFilteredPositions(vars.filteredSavedPositions, vars.filteredSavedPositions.length, vars.savedPositions.length, vars.addnewPuzzle);
   }
-  else displayFilteredPositions(vars.filteredSavedPositions, vars.filteredSavedPositions.length, vars.savedPositions.length, vars.addnewPuzzle);
 
-  vars.filteredSavedPositions = shuffleArray(vars.filteredSavedPositions)
+  vars.filteredSavedPositions = shuffleArray(vars.filteredSavedPositions);
   vars.puzzleIndex = vars.filteredSavedPositions.length;
-  nextPuzzle()
+  nextPuzzle();
 }

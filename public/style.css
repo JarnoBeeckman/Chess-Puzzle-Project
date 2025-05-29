@@ -36,12 +36,16 @@ li button {
   padding: 8px 16px;
 }
 
-button#addPuzzle, .save, button#applyFilter, .add {
+button#addPuzzle,
+.save,
+button#applyFilter,
+.add {
   background-color: #4CAF50;
   color: white;
 }
 
-button#filterPuzzle, .flip {
+button#filterPuzzle,
+.flip {
   background-color: #FF9800;
   color: white;
 }
@@ -64,4 +68,73 @@ button:hover {
   margin-top: 20px;
   font-size: 14px;
   color: #555;
+}
+
+/* Modal container */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+/* Base button style */
+.btn {
+  margin: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+/* Archive button specific */
+.archive-btn {
+  background-color: #f44336;
+  /* red */
+}
+
+.archive-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Continue button specific */
+.continue-btn {
+  background-color: #4CAF50;
+  /* green */
+}
+
+.continue-btn:hover {
+  background-color: #45a049;
 }

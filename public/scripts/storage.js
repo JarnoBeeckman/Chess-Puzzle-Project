@@ -51,7 +51,7 @@ export async function saveNewPuzzle() {
     await fetch("/positions/opening", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: puzzleName, fen: vars.startingFen, moves: puzzlemoves, id: vars.savedPositions.length }),
+      body: JSON.stringify({ name: puzzleName, fen: vars.startingFen, moves: puzzlemoves, id: vars.savedPositions.length, archived: false }),
     });
     alert("Puzzle saved")
   } catch (error) {
@@ -77,4 +77,16 @@ export async function saveMiddlePuzzle(position) {
     console.error("Error saving new puzzle:", error);
   }
   getPositions();
+}
+
+export async function toggleArchived() {
+  try {
+    await fetch("/positions/opening", {
+      method: 'PUT',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: vars.currentId })
+    })
+  } catch (error) {
+    console.error("Error saving new puzzle:", error);
+  }
 }
