@@ -1116,5 +1116,26 @@
     ],
     "id": 57,
     "fk": 141
+  },
+  {
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "moves": [
+      "g6",
+      "h4",
+      "h5",
+      "c4",
+      "d5",
+      "Nc3",
+      "Be6",
+      "Qb3",
+      "dxc4",
+      "Qxb7",
+      "Nd7",
+      "Qc6",
+      "Rb8",
+      "Qxe6+"
+    ],
+    "id": 58,
+    "fk": 122
   }
 ]
