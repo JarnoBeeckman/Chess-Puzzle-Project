@@ -13,6 +13,7 @@ export function loadPosition(index) {
 
   const position = vars.filteredSavedPositions[index];
   vars.currentId = position.id
+  vars.currentMiddleId = position.middleId
   vars.isWhite = position.fen.split(' ')[1] === 'w'; // Determine if you're playing as white or black
   vars.chess.load(position.fen);
   vars.board.position(position.fen);

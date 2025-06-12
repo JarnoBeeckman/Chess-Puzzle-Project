@@ -1,5 +1,5 @@
 import { vars } from "../vars.js";
-import { saveNewPuzzle, saveMiddlePuzzle, toggleArchived } from "../storage.js"
+import { saveNewPuzzle, saveMiddlePuzzle, toggleArchived, toggleArchivedMiddle } from "../storage.js"
 import { filterPositions } from "./filter.js";
 import { nextPuzzle, handleMove, addnewPuzzle } from "../puzzleLogic.js"
 
@@ -66,7 +66,8 @@ export function showArchiveControls() {
   archiveBtn.textContent = isArchived ? "Unarchive" : "Archive";
   archiveBtn.className = "btn archive-btn";
   archiveBtn.onclick = () => {
-    toggleArchived()
+    if (current.middleId) toggleArchivedMiddle()
+    else toggleArchived()
   };
   container.appendChild(archiveBtn);
 

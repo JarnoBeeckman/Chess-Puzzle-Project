@@ -105,6 +105,19 @@ app.put("/positions/opening", (req, res) => {
   }
 })
 
+app.put("/positions/middle", (req, res) => {
+  const { id } = req.body;
+  if (id) {
+    const data = getSavedMiddles();
+    const index = data.findIndex(p => p.id === id);
+    if (index >= 0) data[index].archived = !data[index].archived;
+    saveMiddlegames(data);
+    res.json({ message: "Toggled archived succesfully!" });
+  } else {
+    res.status(400).json({ message: "Invalid data provided." });
+  }
+})
+
 
 // Serve the `index.html` file on the root route
 app.get("/", (req, res) => {

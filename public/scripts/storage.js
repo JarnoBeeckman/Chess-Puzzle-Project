@@ -90,3 +90,15 @@ export async function toggleArchived() {
     console.error("Error saving new puzzle:", error);
   }
 }
+
+export async function toggleArchivedMiddle() {
+  try {
+    await fetch("/positions/middle", {
+      method: 'PUT',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: vars.currentMiddleId })
+    })
+  } catch (error) {
+    console.error("Error saving new puzzle:", error);
+  }
+}

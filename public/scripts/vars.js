@@ -9,6 +9,7 @@ export const vars = {
    puzzleIndex: 0,
    currentMoveIndex: 0, // Tracks the current move in the opening sequence
    currentId: null,
+   currentMiddleId: null,
    isWhite: true, // Tracks if you are playing white or black
    moveSequence: [], // Tracks the sequence of moves (for alternating)
    faultList: [],

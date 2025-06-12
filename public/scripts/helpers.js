@@ -21,16 +21,18 @@ export function shuffleArray(array) {
   return array;
 }
 
-export function addMiddleGames(list, wasFiltered) {
+export function addMiddleGames(list, wasFiltered, includeArchived) {
 
   const newPositions = [];
 
   list.forEach((pos) => {
-    const relatedMiddlegames = vars.savedMiddlegames.filter(x => x.fk === pos.id);
+    const relatedMiddlegames = vars.savedMiddlegames.filter(x => x.fk === pos.id && (includeArchived || !x.archived)
+    );
+    console.log(pos)
 
     if (relatedMiddlegames.length > 0) {
       relatedMiddlegames.forEach(middlegame => {
-        newPositions.push({ ...pos, middle: middlegame.moves });
+        newPositions.push({ ...pos, middle: middlegame.moves, middleId: middlegame.id, archived: middlegame.archived });
       });
       pos.middle = relatedMiddlegames
     } else {
@@ -64,9 +66,9 @@ export function applyFilter() {
   });
 
   if (vars.includeMiddle) {
-    vars.filteredSavedPositions = addMiddleGames(vars.filteredSavedPositions, true);
+    vars.filteredSavedPositions = addMiddleGames(vars.filteredSavedPositions, true, includeArchived);
   } else {
-    displayFilteredPositions(vars.filteredSavedPositions, vars.filteredSavedPositions.length, vars.savedPositions.length, vars.addnewPuzzle);
+    displayFilteredPositions(vars.filteredSavedPositions);
   }
 
   vars.filteredSavedPositions = shuffleArray(vars.filteredSavedPositions);

@@ -25,7 +25,7 @@ function getSavedPositions() {
 
 const savedPositions = getSavedPositions();
 savedPositions.forEach((pos) => {
-  if (!pos.archived)
+  if (pos.archived)
     pos.archived = false;
 })
 
