@@ -28,7 +28,6 @@ export function addMiddleGames(list, wasFiltered, includeArchived) {
   list.forEach((pos) => {
     const relatedMiddlegames = vars.savedMiddlegames.filter(x => x.fk === pos.id && (includeArchived || !x.archived)
     );
-    console.log(pos)
 
     if (relatedMiddlegames.length > 0) {
       relatedMiddlegames.forEach(middlegame => {
@@ -55,15 +54,7 @@ export function applyFilter() {
   vars.isFaultOnly = document.getElementById("faultFilter").checked;
   vars.includeMiddle = document.getElementById("middle").checked;
 
-  vars.filteredSavedPositions = vars.savedPositions.filter(position => {
-    const codeMatches = codeFilter ? position.name.toUpperCase().startsWith(codeFilter) : true;
-    const nameMatches = nameFilter ? position.name.toLowerCase().includes(nameFilter) : true;
-    const colorMatches = colorFilter ? position.fen.split(' ')[1] === colorFilter : true;
-    const faultMatches = vars.isFaultOnly ? vars.faultList[position.id] > 0 : true;
-    const archivedMatches = includeArchived ? true : !position.archived;
-
-    return codeMatches && nameMatches && colorMatches && faultMatches && archivedMatches;
-  });
+  posFilter(codeFilter,nameFilter, colorFilter,includeArchived)
 
   if (vars.includeMiddle) {
     vars.filteredSavedPositions = addMiddleGames(vars.filteredSavedPositions, true, includeArchived);
@@ -74,6 +65,18 @@ export function applyFilter() {
   vars.filteredSavedPositions = shuffleArray(vars.filteredSavedPositions);
   vars.puzzleIndex = vars.filteredSavedPositions.length;
   nextPuzzle();
+}
+
+export function posFilter(codeFilter,nameFilter,colorFilter, includeArchived) {
+  vars.filteredSavedPositions = vars.savedPositions.filter(position => {
+    const codeMatches = codeFilter ? position.name.toUpperCase().startsWith(codeFilter) : true;
+    const nameMatches = nameFilter ? position.name.toLowerCase().includes(nameFilter) : true;
+    const colorMatches = colorFilter ? position.fen.split(' ')[1] === colorFilter : true;
+    const faultMatches = vars.isFaultOnly ? vars.faultList[position.id] > 0 : true;
+    const archivedMatches = includeArchived ? true : !position.archived;
+
+    return codeMatches && nameMatches && colorMatches && faultMatches && archivedMatches;
+  });
 }
 export function splitMoves(moves, chunkSize = 10) {
   const lines = [];

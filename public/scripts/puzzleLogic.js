@@ -1,6 +1,6 @@
 import { displayNewPuzzleForm, displayMessage, showArchiveControls } from "./ui/general.js";
 import { vars } from "./vars.js";
-import { shuffleArray, addMiddleGames } from "./helpers.js"
+import { shuffleArray, addMiddleGames, posFilter } from "./helpers.js"
 import { saveToLocalStorage } from "./storage.js"
 
 // Load a puzzle
@@ -8,7 +8,8 @@ export function loadPosition(index) {
   let currentIsWhite = vars.isWhite;
   if (vars.filteredSavedPositions.length === 0) {
     vars.isFaultOnly = 0; //it also comes here after completing all fault-only puzzles
-    vars.filteredSavedPositions = shuffleArray(addMiddleGames(vars.savedPositions))
+    posFilter()
+    vars.filteredSavedPositions = shuffleArray(addMiddleGames(vars.filteredSavedPositions, false,false))
   }
 
   const position = vars.filteredSavedPositions[index];

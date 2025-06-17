@@ -1115,7 +1115,7 @@
     ],
     "id": 55,
     "fk": 176,
-    "archived": true
+    "archived": false
   },
   {
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",

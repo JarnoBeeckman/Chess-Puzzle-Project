@@ -66,7 +66,11 @@ export function showArchiveControls() {
   archiveBtn.textContent = isArchived ? "Unarchive" : "Archive";
   archiveBtn.className = "btn archive-btn";
   archiveBtn.onclick = () => {
-    if (current.middleId) toggleArchivedMiddle()
+    if (current.middleId) {
+      toggleArchivedMiddle()
+      const relatedMiddlegames = vars.savedMiddlegames.filter(x => x.fk === vars.currentId && !x.archived)
+      if (relatedMiddlegames.length === 1) toggleArchived()
+    }
     else toggleArchived()
   };
   container.appendChild(archiveBtn);
