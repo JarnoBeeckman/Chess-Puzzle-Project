@@ -62,6 +62,15 @@ export function showArchiveControls() {
   const current = vars.filteredSavedPositions[vars.puzzleIndex];
   const isArchived = current.archived === true;
 
+  const continueBtn = document.createElement("button");
+  continueBtn.textContent = "Continue";
+  continueBtn.className = "btn continue-btn";
+  continueBtn.onclick = () => {
+    container.innerHTML = "";
+    nextPuzzle();
+  };
+  container.appendChild(continueBtn);
+
   const archiveBtn = document.createElement("button");
   archiveBtn.textContent = isArchived ? "Unarchive" : "Archive";
   archiveBtn.className = "btn archive-btn";
@@ -72,17 +81,11 @@ export function showArchiveControls() {
       if (relatedMiddlegames.length === 1) toggleArchived()
     }
     else toggleArchived()
+    continueBtn.onclick()
   };
   container.appendChild(archiveBtn);
 
-  const continueBtn = document.createElement("button");
-  continueBtn.textContent = "Continue";
-  continueBtn.className = "btn continue-btn";
-  continueBtn.onclick = () => {
-    container.innerHTML = "";
-    nextPuzzle();
-  };
-  container.appendChild(continueBtn);
+  
 }
 
 // Set up event listeners
